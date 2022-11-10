@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+}
+
+.custom-img {
+  background-image: url("https://static.wixstatic.com/media/8fa582_cd6f8f7c550c4836888c3396f9268277~mv2.jpg/v1/crop/x_0,y_288,w_1600,h_464/fill/w_980,h_327,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Today%20TT.jpg");
+}
+.rac-colour {
+  color: #67162c;
+}
+
+/* create a class that changes text colour to blue on hover  */
+.hover:hover {
+  color: #bf073b !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Staatliches;
+  font-size: 80px;
+}
+
+#category {
+  font-family: Staatliches;
+  font-weight: 500;
+}
+
+#title {
+  letter-spacing: 0.4px;
+  font-size: 50px;
+  font-size: 1.375rem;
+  line-height: 1.13636;
+}
+
+#banner {
+  margin: 20px;
+  height: 800px;
+}
+
+#editor {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.uk-navbar-container {
+  background: #67162b !important;
+  font-family: Staatliches;
+}
+
+img:hover {
+  opacity: 1;
+  transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
