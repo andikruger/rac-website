@@ -8,10 +8,12 @@ import IgImg6 from "../../assets/img-6.jpeg";
 import InstagramImg from "./InstagramImg";
 
 const Instagram = () => {
+
+    
   return (
-    <div className="max-w-[1240px] mx-auto text-center py-4">
-      <p className="text-2xl font-bold">Follow me on Instagram</p>
-      <p className="pb-4">@YourName</p>
+    <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4">
+      <p className="text-2xl font-bold">Follow us on Instagram 📸</p>
+      <p className="pb-4">@rac</p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4">
         <InstagramImg socialImg={IgImg1} />
         <InstagramImg socialImg={IgImg2} />

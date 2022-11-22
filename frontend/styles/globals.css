@@ -8,7 +8,8 @@ html {
 }
 
 .custom-img {
-  background-image: url("https://static.wixstatic.com/media/8fa582_cd6f8f7c550c4836888c3396f9268277~mv2.jpg/v1/crop/x_0,y_288,w_1600,h_464/fill/w_980,h_327,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Today%20TT.jpg");
+  /* background-image: url("https://static.wixstatic.com/media/8fa582_cd6f8f7c550c4836888c3396f9268277~mv2.jpg/v1/crop/x_0,y_288,w_1600,h_464/fill/w_980,h_327,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Today%20TT.jpg"); */
+  background-image: url("https://i.picsum.photos/id/946/3000/3000.jpg?hmac=NOxH2eFMum42wBD-X3PhHi90k9iCisn3aHz54090eMA");
 }
 .rac-colour {
   color: #67162c;
@@ -16,6 +17,10 @@ html {
 
 /* create a class that changes text colour to blue on hover  */
 .hover:hover {
+  color: #bf073b !important;
+}
+
+.branding-hover:hover {
   color: #bf073b !important;
 }
 
@@ -59,4 +64,59 @@ h1 {
 img:hover {
   opacity: 1;
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.glass-nav {
+  background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+ border-radius: 10px;
+/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.glass-nav-mobile {
+  background: rgba( 255, 255, 255, 0.9 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+ border-radius: 10px;
+/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+
+.blogimg {
+  margin: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 85%;
+  border-width: 1px;
+  border-color: #2b2b2b5e;
+}
+
+@media (min-width: 768px) {
+  .blogimg {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogimg {
+    max-width: 55%;
+  }
+}
+
+.animated {
+  transition: transform 350ms ease-in-out 100ms,
+      opacity 350ms ease-in-out 100ms;
+  --tw-translate-y: -5px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
+}
+
+.shown {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
 }

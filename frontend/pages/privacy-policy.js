@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 
-const About = () => {
+const Privacy = () => {
   return (
     <>
       <Head>
@@ -12,10 +12,12 @@ const About = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero heading="PrivacyPolicy" message="" />
+      <Hero heading="Privacy Policy" message="" />
+
       <div>
         <h1 className="text-2xl font-bold text-center p-4 m-4 py-0">
-          THE "POPIA"ACT. (Protection of Personal Information Act, No.4 of 2013)
+          The "POPIA" Act. (Protection of Personal Information Act, No.4 of
+          2013)
         </h1>
       </div>
       {/* create a text section with styling */}
@@ -26,17 +28,20 @@ const About = () => {
           Personal information on the Club Data Base.
           <br />
           <br />
-          <p className="text-bold">The Personal Information we keep is:</p>
-          <ul className="list-disc list-inside text-center">
-            <li>First name</li>
-            <li>Last Name</li>
-            <li>Mobile Phone Number </li>
-            <li>Subscriptions paid or due</li>
-            <li>ID Number</li>
-            <li>Email Number</li>
-            <li>License Number</li>
-            <li>Date of Joining the Club</li>
-          </ul>
+          <b>The Personal Information we keep is:</b>
+        </p>
+        <ul className="list-disc list-inside text-center">
+          <li>First name</li>
+          <li>Last Name</li>
+          <li>Mobile Phone Number </li>
+          <li>Subscriptions paid or due</li>
+          <li>ID Number</li>
+          <li>Email Number</li>
+          <li>License Number</li>
+          <li>Date of Joining the Club</li>
+        </ul>
+        <p className="text-lg text-gray-900  text-center p-4 py-0">
+          <br />
           <br />
           This information is updated, where necessary, on receipt of the
           Members annual Licence Renewal Form. The licence renewal form is
@@ -76,4 +81,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Privacy;

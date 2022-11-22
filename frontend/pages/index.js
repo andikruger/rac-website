@@ -15,10 +15,12 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero heading="Rand Athletic Club" message="Lets go for a run" />
-      <Slider slides={SliderData} />
+      {/* <Slider slides={SliderData} /> */}
+      
       <Instagram />
+
       <Portfolio />
-      <ContactForm />
+      {/* <ContactForm /> */}
     </>
   );
 };
