@@ -16,7 +16,7 @@ const contactForm = () => {
           <input
             className="border shadow-lg p-3"
             type="email"
-            placeholder="Email"
+            placeholder="Email me"
           />
         </div>
         <input
