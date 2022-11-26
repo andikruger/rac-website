@@ -209,7 +209,7 @@ const Register = () => {
             <div className="pb-2">
               <div className="text-center text-white text-sm font-mono">
                 Already have an account?{" "}
-                <Link href="/login" legacyBehavior>
+                <Link href="/auth/login" legacyBehavior>
                   <a className="text-[#67162c] hover:text-[#67162c]">Login</a>
                 </Link>
               </div>
@@ -217,7 +217,7 @@ const Register = () => {
               {/* reset password */}
               <div className="text-center text-white text-sm font-mono">
                 Forgot Password?{" "}
-                <Link href="/reset-password" legacyBehavior>
+                <Link href="/auth/forgotPassword" legacyBehavior>
                   <a className="text-[#67162c] hover:text-[#67162c]">
                     Reset Password
                   </a>

@@ -175,16 +175,18 @@ const Login = () => {
             </form>
             <div className="pb-2">
               <div className="text-center text-white text-sm font-mono">
-                Already have an account?{" "}
-                <Link href="/login" legacyBehavior>
-                  <a className="text-[#67162c] hover:text-[#67162c]">Login</a>
+                New here?{" "}
+                <Link href="/auth/register" legacyBehavior>
+                  <a className="text-[#67162c] hover:text-[#67162c]">
+                    Register
+                  </a>
                 </Link>
               </div>
 
               {/* reset password */}
               <div className="text-center text-white text-sm font-mono">
                 Forgot Password?{" "}
-                <Link href="/reset-password" legacyBehavior>
+                <Link href="/auth/forgotPassword" legacyBehavior>
                   <a className="text-[#67162c] hover:text-[#67162c]">
                     Reset Password
                   </a>
