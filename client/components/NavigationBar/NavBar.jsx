@@ -1,13 +1,16 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { ToastContainer } from "react-toastify";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
   const [shaddow, setShaddow] = useState("none");
-  const [classes, setClasses] = useState("fixed left-0 top-0 w-full z-20 ease-in duration-300");
+  const [classes, setClasses] = useState(
+    "fixed left-0 top-0 w-full z-20 ease-in duration-300"
+  );
 
   const handleNav = () => {
     setNav(!nav);
@@ -15,23 +18,22 @@ const NavBar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      
       if (window.scrollY >= 90) {
-        setClasses("fixed left-0 top-0 w-full z-20 ease-in duration-300 glass-nav");
+        setClasses(
+          "fixed left-0 top-0 w-full z-20 ease-in duration-300 glass-nav"
+        );
         setColor("transparent");
         setTextColor("#ffffff");
         setShaddow("0px 4px 4px rgba(0, 0, 0, 0.25)");
-      } 
-    
-      else {
+      } else {
         setColor("transparent");
         setTextColor("#ffffff");
         setShaddow("none");
       }
-        if (window.scrollY >= 750) {
+      if (window.scrollY >= 750) {
         setTextColor("#67162c");
       }
-         if (window.scrollY < 90) {
+      if (window.scrollY < 90) {
         setClasses("fixed left-0 top-0 w-full z-20 ease-in duration-300 ");
       }
     };
@@ -48,11 +50,18 @@ const NavBar = () => {
     >
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link className="branding-hover" href="/">
-          <h1 style={{ color: `${textColor}`}} className="font-bold text-4xl duration-300">
+          <h1
+            style={{ color: `${textColor}` }}
+            className="font-bold text-4xl duration-300"
+          >
             RAC
           </h1>
         </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex duration-300">
+        <ToastContainer />
+        <ul
+          style={{ color: `${textColor}` }}
+          className="hidden sm:flex duration-300"
+        >
           <li className="p-4">
             <Link className="hover" href="/">
               Home
@@ -88,7 +97,7 @@ const NavBar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}`,  }} />
+            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
           ) : (
             <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}

@@ -11,13 +11,15 @@
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.35",
     "@react-google-maps/api": "^2.16.1",
+    "axios": "^1.2.0",
     "moment": "^2.29.4",
     "next": "13.0.2",
     "qs": "^6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.3",
-    "react-moment": "^1.1.2"
+    "react-moment": "^1.1.2",
+    "react-toastify": "^9.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

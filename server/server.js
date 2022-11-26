@@ -3,6 +3,16 @@ const express = require("express");
 const app = express();
 require("dotenv").config({ path: "./config/config.env" });
 const { requireAuth } = require("./middleware/auth.middleware");
+const cors = require("cors");
+
+// cors
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
+
 // connect to the database and display a message if successful and if not log the error
 const mongoose = require("mongoose");
 mongoose
