@@ -9,7 +9,7 @@ const NavBar = () => {
   const [textColor, setTextColor] = useState("white");
   const [shaddow, setShaddow] = useState("none");
   const [classes, setClasses] = useState(
-    "fixed left-0 top-0 w-full z-20 ease-in duration-300"
+    "fixed left-0 top-0 w-full z-20 ease-in duration-300 glass-nav"
   );
 
   const handleNav = () => {
@@ -34,7 +34,9 @@ const NavBar = () => {
         setTextColor("#67162c");
       }
       if (window.scrollY < 90) {
-        setClasses("fixed left-0 top-0 w-full z-20 ease-in duration-300 ");
+        setClasses(
+          "fixed left-0 top-0 w-full z-20 ease-in duration-300 glass-nav "
+        );
       }
     };
     window.addEventListener("scroll", changeColor);

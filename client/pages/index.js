@@ -26,7 +26,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero heading="Rand Athletic Club" message="Lets go for a run" />
+      <Hero heading="Rand Athletic Club" message="Running afta criminaals" />
       {/* <Slider slides={SliderData} /> */}
 
       <Instagram />

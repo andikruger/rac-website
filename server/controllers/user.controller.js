@@ -155,7 +155,7 @@ exports.resetPasswordController = async (req, res, next) => {
     if (!user) {
       res.status(400).json({
         success: false,
-        message: "The token is invalid or has expired",
+        message: { token: "The token is invalid or has expired" },
       });
     }
 

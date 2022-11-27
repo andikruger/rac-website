@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import IgImg1 from "../../assets/img-1.jpeg";
 import IgImg2 from "../../assets/img-2.jpeg";
 import IgImg3 from "../../assets/img-3.jpeg";
@@ -6,10 +6,21 @@ import IgImg4 from "../../assets/img-4.jpeg";
 import IgImg5 from "../../assets/img-5.jpeg";
 import IgImg6 from "../../assets/img-6.jpeg";
 import InstagramImg from "./InstagramImg";
+import axios from "axios";
 
 const Instagram = () => {
+  // make a get request to the instagram api
+  // get the data and store it in a variable
 
-    
+  //const url "https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN";
+  const url = "https://feeds.behold.so/q5mTtvctgvraVhPu2CYm";
+  const [data, setData] = useState([]);
+  let done = false;
+
+  let response = undefined;
+
+  console.log(data);
+
   return (
     <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4">
       <p className="text-2xl font-bold">Follow us on Instagram 📸</p>
