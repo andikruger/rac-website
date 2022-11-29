@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-gray-200">
       {/* create a copyright message, a link to the privacy policy and text saying "Made with ❤️ by Vitomilix" in one line*/}
       {/* print the current year */}
 

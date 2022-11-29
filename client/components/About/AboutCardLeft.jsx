@@ -7,20 +7,18 @@ const AboutCardLeft = ({ text, image }) => {
   // the text should be 3/4 of the width of the card
 
   return (
-    <div className="flex flex-row justify-end ">
-      <div className="flex flex-row rounded-lg shadow-lg m-4 w-1/2 bg-white">
-        <div className="w-1/2">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={300}
-            height={300}
-            className="rounded-lg"
-          />
-        </div>
-        <div className="w-full">
-          <p className="text-strong m-4">{text}</p>
-        </div>
+    <div className="flex flex-row rounded-lg shadow-lg m-4 lg:w-1/2 bg-white">
+      <div className="w-full">
+        <p className="text-strong m-4">{text}</p>
+      </div>
+      <div className="w-1/2">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={300}
+          height={100}
+          className="rounded-lg"
+        />
       </div>
     </div>
   );
