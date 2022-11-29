@@ -1,27 +1,11 @@
-import Head from "next/head";
-import HeroSmall from "../components/Hero/HeroSmall";
+import React from "react";
 import Image from "next/image";
-import casper from "../assets/about/CasparGreef.jpg";
 
-const About = () => {
+const Paragraph = ({ content }) => {
   return (
     <>
-      <Head>
-        <title>About Us | Rand Athletic Club</title>
-        <meta
-          name="description"
-          content="Created as template for future work"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <HeroSmall heading="About RAC" message="" />
-      <div>
-        <h1 className="text-3xl font-bold text-center p-4 m-4 py-0">
-          It started nearly 50 years ago, in September 1972
-        </h1>
-      </div>
-
-      {/* start */}
+      {" "}
+      {/* create a paragraph with text 3/4 of the width and an image filling the rest of the width and a caption under the image */}
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="w-full md:w-3/4 p-4 m-4">
           <p className="text-lg">
@@ -43,16 +27,11 @@ const About = () => {
             height={300}
             className="rounded-lg"
           />
-          <p className="text-center text-strong">
-            Bruce Clark picking up a badly cramping Richard Cohen some 40 yards
-            from the Comrades finishing line. They finished in time for both to
-            win their 1997 Silver Medals.
-          </p>
+          <p className="text-center text-strong">Bruce Clark</p>
         </div>
       </div>
-      {/* end */}
     </>
   );
 };
 
-export default About;
+export default Paragraph;

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { useRouter } from "next/router";
+import jsCookie from "js-cookie";
 
 const Register = () => {
   const [form_data, setForm_data] = useState({
@@ -29,7 +31,7 @@ const Register = () => {
     if (confirmPassword()) {
       try {
         axios
-          .post("http://localhost:8000/api/v1/user/register", form_data)
+          .post("/api/users/register", form_data)
           .then((res) => {
             if (res.data.success) {
               toast.success(res.data.message);
@@ -39,9 +41,7 @@ const Register = () => {
             const errors = err.response.data.message;
             console.log(errors);
             // error is in the form of {type: "message"} use toasts to display
-            for (const [key, value] of Object.entries(errors)) {
-              toast.error(value);
-            }
+            toast.error(errors);
           });
       } catch (err) {
         console.log("in catch");

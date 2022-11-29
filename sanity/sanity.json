@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "rac"
+    "name": "Rand Athletic Club"
   },
   "api": {
     "projectId": "yavqngwf",
@@ -11,13 +11,12 @@
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/google-maps-input"
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

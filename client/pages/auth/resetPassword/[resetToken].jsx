@@ -31,10 +31,7 @@ const ResetPassword = () => {
     if (confirmPassword()) {
       try {
         axios
-          .put(
-            `http://localhost:8000/api/v1/user/passwordreset/${resetToken}`,
-            form_data
-          )
+          .put(`/api/users/resetpassword/${resetToken}`, form_data)
           .then((res) => {
             if (res.data.success) {
               toast.success(res.data.message);
@@ -44,9 +41,7 @@ const ResetPassword = () => {
             const errors = err.response.data.message;
             console.log(errors);
             // error is in the form of {type: "message"} use toasts to display
-            for (const [key, value] of Object.entries(errors)) {
-              toast.error(value);
-            }
+            toast.error(errors);
           });
       } catch (err) {
         console.log("in catch");

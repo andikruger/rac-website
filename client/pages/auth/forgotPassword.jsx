@@ -26,19 +26,18 @@ const ForgotPassword = () => {
     if (requiredFields()) {
       try {
         axios
-          .post("http://localhost:8000/api/v1/user/forgotpassword", form_data)
+          .post("/api/users/forgotpassword", form_data)
           .then((res) => {
             if (res.data.success) {
               toast.success(res.data.message);
             }
           })
           .catch((err) => {
+            console.log(err);
             const errors = err.response.data.message;
             console.log(errors);
             // error is in the form of {type: "message"} use toasts to display
-            for (const [key, value] of Object.entries(errors)) {
-              toast.error(value);
-            }
+            toast.error(errors);
           });
       } catch (err) {
         console.log("in catch");

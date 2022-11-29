@@ -3,6 +3,7 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import jsCookie from "js-cookie";
 
 const Login = () => {
   const [form_data, setForm_data] = useState({
@@ -27,21 +28,22 @@ const Login = () => {
     if (requiredFields()) {
       try {
         axios
-          .post("http://localhost:8000/api/v1/user/login", form_data)
+          .post("/api/users/login", form_data)
           .then((res) => {
             if (res.data.success) {
-              toast.success(res.data.message);
+              // set cookie
+              jsCookie.set("token", res.data.token, { expires: 30 });
+              window.location.href = "/";
+              sessionStorage.setItem("login", `${res.data.message}`);
+
               localStorage.setItem("token", res.data.token);
               localStorage.setItem("name", res.data.name);
             }
           })
           .catch((err) => {
             const errors = err.response.data.message;
-            console.log(errors);
             // error is in the form of {type: "message"} use toasts to display
-            for (const [key, value] of Object.entries(errors)) {
-              toast.error(value);
-            }
+            toast.error(errors);
           });
       } catch (err) {
         console.log("in catch");
