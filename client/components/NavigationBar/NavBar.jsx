@@ -30,7 +30,7 @@ const NavBar = () => {
         setTextColor("#ffffff");
         setShaddow("none");
       }
-      if (window.scrollY >= 750) {
+      if (window.scrollY >= 400) {
         setTextColor("#67162c");
       }
       if (window.scrollY < 90) {

@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Hero from "../components/Hero/Hero";
+import HeroSmall from "../components/Hero/HeroSmall";
 import ContactForm from "../components/Contact/Contact";
+import heroImg from "../assets/memberphoto.jpg";
 const Contact = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Contact = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero heading="Get hold of us" message="" />
+      <HeroSmall heading="Get hold of us" message="" image={heroImg} />
 
       <div>
         <h1 className="text-2xl font-bold text-center p-4 m-4 py-0 rac-colour">

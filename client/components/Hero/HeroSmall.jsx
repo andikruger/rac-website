@@ -3,9 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
-import heroImg from "../../assets/toughone22.jpg";
 
-const Hero = ({ heading, message }) => {
+const Hero = ({ heading, message, image }) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -64,12 +63,15 @@ const Hero = ({ heading, message }) => {
   }, []);
 
   const styling = {
-    backgroundImage: `url(${heroImg.src})`,
+    backgroundImage: `url(${image.src})`,
   };
 
   return (
     <>
-      <header className="w-full smallhero-height bg-cover bg-center flex justify-center items-center login-img">
+      <header
+        className="w-full smallhero-height bg-cover bg-center flex justify-center items-center"
+        style={styling}
+      >
         <div className="flex flex-col justify-center items-center">
           <h1 className=" text-center text-5xl text-white font-bold drop-shadow-lg">
             {heading}

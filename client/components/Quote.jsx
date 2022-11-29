@@ -4,10 +4,7 @@ const Quote = (props) => {
   // if the author is not provided, then we will not display the author
   const author = props.author ? (
     <>
-      <p className="text-sm text-gray-500 font-bold text-center p-4 py-0">
-        {" "}
-        -{" "}
-      </p>
+      <p className="text-sm text-gray-500 font-bold text-center p-4 "> - </p>
       <p className="text-sm text-gray-500 font-bold text-center p-4 py-0">
         {props.author}
       </p>
