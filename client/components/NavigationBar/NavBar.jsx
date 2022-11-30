@@ -99,7 +99,7 @@ const NavBar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={20} style={{ color: `#67162c` }} />
           ) : (
             <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}
@@ -108,8 +108,8 @@ const NavBar = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 glass-nav-mobile "
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 glass-nav-mobile "
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen  text-center ease-in duration-300 bg-white/90 backdrop-filter backdrop-blur-xl"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300  "
           }
         >
           <ul>
@@ -117,37 +117,49 @@ const NavBar = () => {
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 rac-colour"
             >
-              <Link href="/">Home</Link>
+              <Link className="hover" href="/">
+                Home
+              </Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 rac-colour"
             >
-              <Link href="/#gallery">About us</Link>
+              <Link className="hover" href="/#gallery">
+                About us
+              </Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 rac-colour"
             >
-              <Link href="/#portfolio">Club Activities</Link>
+              <Link className="hover" href="/#portfolio">
+                Club Activities
+              </Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 rac-colour"
             >
-              <Link href="/#portfolio">Membership</Link>
+              <Link className="hover" href="/#portfolio">
+                Membership
+              </Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 rac-colour"
             >
-              <Link href="/#portfolio">Races</Link>
+              <Link className="hover" href="/#portfolio">
+                Races
+              </Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 rac-colour"
             >
-              <Link href="/#contact">Contact</Link>
+              <Link className="hover" href="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

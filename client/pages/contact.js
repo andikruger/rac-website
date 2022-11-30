@@ -1,7 +1,7 @@
 import Head from "next/head";
 import HeroSmall from "../components/Hero/HeroSmall";
 import ContactForm from "../components/Contact/Contact";
-import heroImg from "../assets/memberphoto.jpg";
+import heroImg from "../assets/clubhouse.jpg";
 const Contact = () => {
   return (
     <>

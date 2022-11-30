@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { createContext } from "react";
 import { fetchAPI } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
+import "./calander.css";
 export const GlobalContext = createContext({});
 function MyApp({ Component, pageProps }) {
   const { global } = pageProps;

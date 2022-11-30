@@ -22,7 +22,7 @@ const Instagram = () => {
   console.log(data);
 
   return (
-    <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4">
+    <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4 bg-white rounded-lg">
       <p className="text-2xl font-bold">Follow us on Instagram 📸</p>
       <p className="pb-4">@rac</p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4">

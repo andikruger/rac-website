@@ -33,7 +33,9 @@ const Home = () => {
       <Hero heading="Rand Athletic Club" message="Running afta criminaals" />
       {/* <Slider slides={SliderData} /> */}
 
-      <Instagram />
+      <div className="bg-gray-200 p-4">
+        <Instagram />
+      </div>
 
       <Portfolio />
       {/* <ContactForm /> */}
