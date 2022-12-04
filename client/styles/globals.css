@@ -17,11 +17,17 @@ html {
 
 /* create a class that changes text colour to blue on hover  */
 .hover:hover {
-  color: #bf073b !important;
+  color: #470819 !important;
+  text-decoration: none;
+}
+
+.dark-hover:hover {
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
 .branding-hover:hover {
-  color: #bf073b !important;
+  color: #470819 !important;
 }
 
 a {

@@ -33,7 +33,7 @@ const Login = () => {
             if (res.data.success) {
               // set cookie
               jsCookie.set("token", res.data.token, { expires: 30 });
-              window.location.href = "/";
+              window.location.href = "/memberzone";
               sessionStorage.setItem("login", `${res.data.message}`);
 
               localStorage.setItem("token", res.data.token);

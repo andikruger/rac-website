@@ -5,6 +5,17 @@ const signToken = (user) => {
     expiresIn: "30d",
   });
 };
+function isProtected() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return false;
+  }
+  const decoded = jwt.verify(token, "MeStApHerNbecTAyChuRnisoR");
+  if (!decoded) {
+    return false;
+  }
+  return true;
+}
 
 const isAuth = async (req, res, next) => {
   const { authorization } = req.headers;
@@ -22,4 +33,4 @@ const isAuth = async (req, res, next) => {
     res.status(401).send({ success: false, message: "Token is not suppiled" });
   }
 };
-export { signToken, isAuth };
+export { signToken, isAuth, isProtected };

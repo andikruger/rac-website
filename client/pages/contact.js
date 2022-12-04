@@ -32,7 +32,7 @@ const Contact = () => {
               <a
                 href="mailto:randathletic@iafrica.com
                 "
-                className="text-blue-500 hover:text-blue-700"
+                className="hover rac-colour"
               >
                 randathletic@iafrica.com
               </a>

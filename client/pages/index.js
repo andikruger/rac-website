@@ -16,10 +16,6 @@ const Home = () => {
       toast.info("You have been logged out");
       sessionStorage.removeItem("logout");
     }
-    if (sessionStorage.getItem("login")) {
-      toast.success(sessionStorage.getItem("login"));
-      sessionStorage.removeItem("login");
-    }
   }, []);
 
   return (
