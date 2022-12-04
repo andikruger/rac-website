@@ -5,7 +5,7 @@ import casper from "../assets/about/CasparGreef.jpg";
 import bruce from "../assets/about/BruceClark.jpg";
 import piet from "../assets/about/PietMahlangu.jpg";
 import gordon from "../assets/about/GordonHowie.jpg";
-import team from "../assets/about/team.jpg";
+import team from "../assets/about/Team.jpg";
 import fordyce from "../assets/about/BruceFordyce.jpg";
 import bob from "../assets/about/BobDeLaMotte.jpg";
 import sonja from "../assets/about/SonjaLaxton.jpg";
