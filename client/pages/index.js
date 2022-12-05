@@ -5,7 +5,7 @@ import Slider from "../components/Slider/Slider";
 import { SliderData } from "../components/Slider/SliderData";
 import Instagram from "../components/InstagramGallery/Instagram";
 import Portfolio from "../components/Portfolio/Portfolio";
-import ContactForm from "../components/Contact/Contact";
+import Calendar from "../components/Calandar";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -20,21 +20,24 @@ const Home = () => {
 
   return (
     <>
-      <Head>
-        <title>Rand Athletic Club</title>
-        <meta name="description" content="An excellent Club" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div className="bg-gray-200">
+        <Head>
+          <title>Rand Athletic Club</title>
+          <meta name="description" content="An excellent Club" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <Hero heading="Rand Athletic Club" message="Running afta criminaals" />
-      {/* <Slider slides={SliderData} /> */}
+        <Hero heading="Rand Athletic Club" message="Running afta criminaals" />
+        {/* <Slider slides={SliderData} /> */}
 
-      <div className="bg-gray-200 p-4">
         <Instagram />
-      </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <Calendar />
+        </div>
 
-      <Portfolio />
-      {/* <ContactForm /> */}
+        <Portfolio />
+        {/* <ContactForm /> */}
+      </div>
     </>
   );
 };

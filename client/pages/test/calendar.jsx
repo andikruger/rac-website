@@ -17,25 +17,19 @@ import { registerLicense } from "@syncfusion/ej2-base";
 import { scheduleData } from "./dummy";
 
 // eslint-disable-next-line react/destructuring-assignment
-const PropertyPane = (props) => <div className="mt-5">{props.children}</div>;
 registerLicense(
   "ORg4AjUWIQA/Gnt2VVhjQlFaclhJXGFWfVJpTGpQdk5xdV9DaVZUTWY/P1ZhSXxRd0RgWX9acHNXRWFaUEc="
 );
 const Scheduler = () => {
   const [scheduleObj, setScheduleObj] = useState();
 
-  const change = (args) => {
-    scheduleObj.selectedDate = args.value;
-    scheduleObj.dataBind();
-  };
-
-  const onDragStart = (arg) => {
-    // eslint-disable-next-line no-param-reassign
-    arg.navigation.enable = true;
-  };
+  function onEventRendered(args) {
+    let categoryColor = args.data.CategoryColor;
+    args.element.style.backgroundColor = categoryColor;
+  }
 
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 mt-32 p-2 md:p-10 bg-white rounded-3xl">
       <ScheduleComponent
         height="650px"
         allowDragAndDrop={false}
@@ -45,6 +39,7 @@ const Scheduler = () => {
         readonly={true}
         selectedDate={new Date(2021, 0, 10)}
         eventSettings={{ dataSource: scheduleData }}
+        eventRendered={onEventRendered.bind(this)}
       >
         <ViewsDirective>
           {["Day", "Week", "WorkWeek", "Month", "Agenda"].map((item) => (

@@ -10,9 +10,11 @@ function MyApp({ Component, pageProps }) {
   const { global } = pageProps;
   return (
     <>
-      <NavBar />
-      <Component {...pageProps} />
-      <Footer />
+      <div className="scrollbar-hide">
+        <NavBar />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
     </>
   );
 }
