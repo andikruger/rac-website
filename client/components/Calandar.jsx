@@ -21,13 +21,16 @@ registerLicense(
   "ORg4AjUWIQA/Gnt2VVhjQlFaclhJXGFWfVJpTGpQdk5xdV9DaVZUTWY/P1ZhSXxRd0RgWX9acHNXRWFaUEc="
 );
 
-const Calendar = () => {
+const Calendar = (data) => {
   const [scheduleObj, setScheduleObj] = useState();
+
+  const selectedDate = new Date();
 
   function onEventRendered(args) {
     let categoryColor = args.data.CategoryColor;
     args.element.style.backgroundColor = categoryColor;
   }
+
   return (
     <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4 bg-white rounded-lg">
       <p className="text-2xl font-bold">What's coming up 🗓️</p>
@@ -36,18 +39,18 @@ const Calendar = () => {
           height="650px"
           allowDragAndDrop={false}
           allowResizing={false}
+          readOnly={true}
           ref={(schedule) => setScheduleObj(schedule)}
-          readonly={true}
-          selectedDate={new Date(2021, 0, 10)}
-          eventSettings={{ dataSource: scheduleData }}
+          selectedDate={selectedDate}
+          eventSettings={{ dataSource: data.data }}
           eventRendered={onEventRendered.bind(this)}
         >
           <ViewsDirective>
-            {["Day", "Week", "Month"].map((item) => (
+            {["Month"].map((item) => (
               <ViewDirective key={item} option={item} />
             ))}
           </ViewsDirective>
-          <Inject services={[Day, Week, Month]} />
+          <Inject services={[Month]} />
         </ScheduleComponent>
       </div>
     </div>

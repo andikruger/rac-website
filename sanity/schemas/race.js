@@ -21,7 +21,8 @@ export default {
     {
       name: "distance",
       title: "Distance",
-      type: "number",
+      type: "array",
+      of: [{ type: "number" }],
       description: "The distance of the race in kilometers",
     },
 

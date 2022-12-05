@@ -37,7 +37,7 @@ const Scheduler = () => {
         ref={(schedule) => setScheduleObj(schedule)}
         cssClass="e-customClass"
         readonly={true}
-        selectedDate={new Date(2021, 0, 10)}
+        selectedDate={selectedDate}
         eventSettings={{ dataSource: scheduleData }}
         eventRendered={onEventRendered.bind(this)}
       >
