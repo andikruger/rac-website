@@ -64,7 +64,8 @@ const Hero = ({ heading, message }) => {
   }, []);
 
   const styling = {
-    backgroundImage: `url(${heroImg.src})`,
+    //backgroundImage: `url(${heroImg.src})`,
+    backgroundImage: `url(https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80)`,
   };
 
   return (
