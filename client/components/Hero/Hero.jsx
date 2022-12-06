@@ -4,9 +4,35 @@ import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import heroImg from "../../assets/toughone22.jpg";
+import sanityClient from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
 
 const Hero = ({ heading, message }) => {
+  // create a client instance
+  const client = sanityClient({
+    projectId: "yavqngwf",
+    dataset: "production",
+    useCdn: true,
+  });
+
+  // create a function to build the image url
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source) {
+    return builder.image(source);
+  }
+
   useEffect(() => {
+    // let url = urlFor(
+    //   "image-0da4e8c76f625ad78280a2283caf4a4f9582d33b-5472x3648-jpg"
+    // )
+    //   .auto("format")
+    //   .fit("max")
+    //   .width(720)
+    //   .focalPoint(0.5, 0.5)
+    //   .toString();
+
+    // console.log(url);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -63,16 +89,18 @@ const Hero = ({ heading, message }) => {
     };
   }, []);
 
-  const styling = {
-    //backgroundImage: `url(${heroImg.src})`,
-    backgroundImage: `url(https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80)`,
-  };
+  // const styling = {
+  //   //backgroundImage: `url(${heroImg.src})`,
+  //   backgroundImage: `url(https://cdn.sanity.io/images/yavqngwf/production/0da4e8c76f625ad78280a2283caf4a4f9582d33b-5472x3648.jpg?fp-x=0.5&fp-y=0.5&w=5000&fit=max&auto=format)`,
+  //   backgroundPosition: `50% 55%`,
+  //   backgroundSize: `cover`,
+  // };
 
   return (
     <>
       <div
-        style={styling}
-        className="flex items-center justify-center  h-screen mb-12 bg-fixed bg-center bg-cover"
+        // style={styling}
+        className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover hero-img"
       >
         {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 " /> */}
         <div className="p-5 text-white  z-[2] mt-[-10rem]">
@@ -103,19 +131,8 @@ const Hero = ({ heading, message }) => {
           </div>
 
           {/* glassmorphism end */}
-
-          {/* HEADING */}
-          {/* <h2 className="text-5xl text-white font-bold">{heading}</h2> */}
-          {/* <p className="py-5 text-xl">{message}</p>
-          <Link href="/#portfolio" passHref>
-            <button className="px-8 py-2 border">Here</button>
-          </Link> */}
         </div>
       </div>
-
-      {/* <div className="absolute bottom-0 z-10 w-full h-auto -mb-1 header-shape">
-        <Image src={shape} alt="shape" width={"100%"} />
-      </div> */}
     </>
   );
 };

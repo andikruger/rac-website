@@ -145,6 +145,10 @@ img:hover {
   background-image: url("https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
 }
 
+.hero-img {
+  background-image: url("https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+}
+
 .smallhero-height {
   height: 30rem;
 }
@@ -156,4 +160,29 @@ img:hover {
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* use a media query to center abackground image on mobile */
+
+@media (max-width: 768) {
+  .register-img {
+    background-position: center;
+  }
+
+  .login-img {
+    background-position: center;
+  }
+
+  .resetpassword-img {
+    background-position: center;
+  }
+
+  .forgot-password-img {
+    background-position: center;
+  }
+  .hero-img {
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("https://cdn.sanity.io/images/yavqngwf/production/0da4e8c76f625ad78280a2283caf4a4f9582d33b-5472x3648.jpg?fp-x=0.5&fp-y=0.5&w=5000&fit=max&auto=format") !important;
+  }
 }
