@@ -134,7 +134,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#gallery">
+                  <Link className="hover" href="/about">
                     About us
                   </Link>
                 </li>
@@ -262,26 +262,11 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#gallery">
-                    About us
+                  <Link className="hover" href="/memberzone">
+                    Memberzone
                   </Link>
                 </li>
-                <li
-                  onClick={handleNav}
-                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
-                >
-                  <Link className="hover" href="/#portfolio">
-                    Club Activities
-                  </Link>
-                </li>
-                <li
-                  onClick={handleNav}
-                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
-                >
-                  <Link className="hover" href="/#portfolio">
-                    Membership
-                  </Link>
-                </li>
+
                 <li
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
@@ -294,8 +279,16 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/contact">
-                    Contact
+                  <Link className="hover" href="/profile">
+                    Profile
+                  </Link>
+                </li>
+                <li
+                  onClick={handleNav}
+                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
+                >
+                  <Link className="hover" href="/logout">
+                    Logout
                   </Link>
                 </li>
               </ul>
