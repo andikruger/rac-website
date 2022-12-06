@@ -24,7 +24,9 @@ registerLicense(
 const Calendar = (data) => {
   const [scheduleObj, setScheduleObj] = useState();
 
+  // selectedDate is current date + 1 month
   const selectedDate = new Date();
+  selectedDate.setMonth(selectedDate.getMonth() + 1);
 
   function onEventRendered(args) {
     let categoryColor = args.data.CategoryColor;
@@ -39,18 +41,18 @@ const Calendar = (data) => {
           height="650px"
           allowDragAndDrop={false}
           allowResizing={false}
-          readOnly={true}
+          readonly={true}
           ref={(schedule) => setScheduleObj(schedule)}
           selectedDate={selectedDate}
           eventSettings={{ dataSource: data.data }}
           eventRendered={onEventRendered.bind(this)}
         >
           <ViewsDirective>
-            {["Month"].map((item) => (
+            {["Week", "Month"].map((item) => (
               <ViewDirective key={item} option={item} />
             ))}
           </ViewsDirective>
-          <Inject services={[Month]} />
+          <Inject services={[Week, Month]} />
         </ScheduleComponent>
       </div>
     </div>

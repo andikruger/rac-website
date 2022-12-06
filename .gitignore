@@ -2,3 +2,5 @@
 sanity/node_modules/.bin/acorn
 
 sanity/node_modules/
+sanity/config/@sanity/google-maps-input.json
+

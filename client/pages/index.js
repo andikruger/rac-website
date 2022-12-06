@@ -25,18 +25,21 @@ const Home = () => {
 
     const dateObj = result.result.map((item) => {
       // auto increment the id
+      // set endtime to 1 hour after start time
+
+      let endTime = new Date(item.startTime);
+      endTime.setHours(endTime.getHours() + 3);
 
       return {
         // id auto increments
-        Id: 1,
+        Id: item._id,
         Subject: item.name,
         StartTime: item.startTime,
-        // EndTime: item.StartTime + 3 hours,
-        EndTime: item.startTime,
+        EndTime: endTime,
         IsAllDay: false,
         CategoryColor: "#67162c",
-        Location: `Marks Park`,
-        Description: `More Info Here: <a href="http://www.google.com" target="_blank">Google</a>`,
+        Location: item.venue,
+        Description: `You can get more information on the <a class="hover rac-colour text-bold" href="http://randathleticclub.co.za/race/${item.slug.current}" target="_blank">Race Page</a>`,
       };
     });
     console.log(dateObj);

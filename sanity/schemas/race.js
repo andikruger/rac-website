@@ -34,6 +34,12 @@ export default {
     },
 
     {
+      title: "Venue",
+      name: "venue",
+      type: "string",
+    },
+
+    {
       title: "Start Location",
       name: "startLocation",
       type: "geopoint",
@@ -53,9 +59,30 @@ export default {
     },
 
     {
-      name: "publishedAt",
-      title: "Published at",
-      type: "datetime",
+      title: "Province",
+      name: "province",
+      type: "string",
+      options: {
+        list: [
+          { title: "Gauteng", value: "Gauteng" },
+          { title: "Western Cape", value: "Western Cape" },
+          { title: "Eastern Cape", value: "Eastern Cape" },
+          { title: "KwaZulu-Natal", value: "KwaZulu-Natal" },
+          { title: "Limpopo", value: "Limpopo" },
+          { title: "Mpumalanga", value: "Mpumalanga" },
+          { title: "North West", value: "North West" },
+          { title: "Northern Cape", value: "Northern Cape" },
+          { title: "Free State", value: "Free State" },
+        ],
+        layout: "dropdown",
+      },
+    },
+    {
+      title: "Important Race",
+      name: "importantRace",
+      type: "boolean",
+      description: "Is this an important Race",
+      default: false,
     },
   ],
 };
