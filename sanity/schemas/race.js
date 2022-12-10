@@ -57,6 +57,34 @@ export default {
       type: "datetime",
       description: "The start time of the race",
     },
+    {
+      title: "Club",
+      name: "club",
+      type: "object",
+      fields: [
+        {
+          title: "Club Name",
+          name: "clubName",
+          type: "string",
+        },
+        {
+          title: "Contact Person",
+          name: "contactPerson",
+          type: "string",
+        },
+        {
+          title: "Contact Number",
+          name: "contactNumber",
+          type: "string",
+          validation: (Rule) => Rule.min(10),
+        },
+        {
+          title: "Contact Email",
+          name: "contactEmail",
+          type: "string",
+        },
+      ],
+    },
 
     {
       title: "Province",

@@ -39,7 +39,7 @@ const Home = () => {
         IsAllDay: false,
         CategoryColor: "#67162c",
         Location: item.venue,
-        Description: `You can get more information on the <a class="hover rac-colour text-bold" href="http://randathleticclub.co.za/race/${item.slug.current}" target="_blank">Race Page</a>`,
+        Description: `You can get more information on the <a class="hover rac-colour text-bold" href="/race/${item.slug.current}" target="_blank">Race Page</a>`,
       };
     });
     console.log(dateObj);

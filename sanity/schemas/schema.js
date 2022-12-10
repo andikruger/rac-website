@@ -11,6 +11,7 @@ import post from "./post";
 import author from "./author";
 import user from "./user";
 import race from "./race";
+import fees from "./fees";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +30,6 @@ export default createSchema({
     blockContent,
     user,
     race,
+    fees,
   ]),
 });
