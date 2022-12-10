@@ -19,7 +19,7 @@ const RaceView = () => {
         setData(res.data.result[0]);
       });
     }
-  }, []);
+  }, [data]);
 
   console.log(data);
 
