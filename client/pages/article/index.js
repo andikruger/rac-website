@@ -5,6 +5,7 @@ import Head from "next/head";
 import Quote from "../../components/Quote";
 import HeroArticle from "../../components/Hero/HeroArticle";
 import heroImg from "../../assets/memberphoto.jpg";
+import Seo from "../../components/seo";
 // sanity url builder
 import imageUrlBuilder from "@sanity/image-url";
 
@@ -19,6 +20,13 @@ function urlFor(source) {
 
 const Article = () => {
   const image = urlFor(doc.mainImage).width(3000).url();
+  const seo = {
+    metaTitle: doc.title,
+    metaDescription: doc.title,
+    shareImage: image,
+    article: true,
+  };
+
   const serializers = {
     normal: (props) => (
       <p className="text-lg p-4" {...props}>
@@ -60,8 +68,7 @@ const Article = () => {
     image: (props) => (
       <img
         className="w-full md:w-3/4 p-4 m-4"
-        src={props.node.asset.url}
-        alt={props.node.alt}
+        src={urlFor(props.asset._ref).width(3000).url()}
       />
     ),
 
@@ -79,14 +86,7 @@ const Article = () => {
 
   return (
     <>
-      <Head>
-        <title>{doc.title}</title>
-        <meta
-          name="description"
-          content="Created as template for future work"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo seo={seo} />
       <HeroArticle heading={doc.title} message="" image={image} />
       <div className="bg-gray-200 p-4">
         {/* start */}

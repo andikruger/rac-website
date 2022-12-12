@@ -1,7 +1,7 @@
 {
   "_createdAt": "2022-12-12T11:41:12Z",
   "_id": "609b007e-4da9-40e4-b651-4f660eb070bf",
-  "_rev": "6AN0p7pWJB2QPdnKXuCDFA",
+  "_rev": "ziHsZ25p0sWbilNq8nYqDi",
   "_type": "post",
   "body": [
     {
@@ -59,6 +59,56 @@
       ],
       "markDefs": [],
       "style": "normal"
+    },
+    {
+      "_key": "b0a99eb8d376",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e53523f9847",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a9b5c287b2dd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6517070880f",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f2a651694771",
+      "_type": "image",
+      "asset": {
+        "_ref": "image-0da4e8c76f625ad78280a2283caf4a4f9582d33b-5472x3648-jpg",
+        "_type": "reference"
+      },
+      "crop": {
+        "_type": "sanity.imageCrop",
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "hotspot": {
+        "_type": "sanity.imageHotspot",
+        "height": 0.29617117117116865,
+        "width": 0.5703125,
+        "x": 0.5,
+        "y": 0.5
+      }
     },
     {
       "_key": "48d938ec5e5e",
@@ -224,7 +274,7 @@
         }
       ],
       "markDefs": [],
-      "style": "h3"
+      "style": "h4"
     },
     {
       "_key": "e66744db4b00",
@@ -628,5 +678,5 @@
     "current": "comrades-2022"
   },
   "title": "Comrades 2022",
-  "_updatedAt": "2022-12-12T12:26:56.545Z"
+  "_updatedAt": "2022-12-12T15:40:35.016Z"
 }
