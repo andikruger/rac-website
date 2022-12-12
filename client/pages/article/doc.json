@@ -1,0 +1,632 @@
+{
+  "_createdAt": "2022-12-12T11:41:12Z",
+  "_id": "609b007e-4da9-40e4-b651-4f660eb070bf",
+  "_rev": "6AN0p7pWJB2QPdnKXuCDFA",
+  "_type": "post",
+  "body": [
+    {
+      "_key": "1941c9cbaa4f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c624ae9de914",
+          "_type": "span",
+          "marks": [],
+          "text": "Congradulations"
+        }
+      ],
+      "markDefs": [],
+      "style": "h1"
+    },
+    {
+      "_key": "d661c4d693cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9d601086a924",
+          "_type": "span",
+          "marks": [],
+          "text": "We had 144 brave runners to firstly enter Comrades 2022 of which 38 did not make the trip to KZN."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "956ec8f00dbc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bdd0fc6f98f10",
+          "_type": "span",
+          "marks": [],
+          "text": "But, 94 of our runners did manage to get to Durban by the 12th hour cut-off and complete the gruelling 90km from the two famous Cities. Sitting on the last stretch it was heart breaking to witness the 12 who missed the cut-off having completed so many kilometres. But, we must look up to each and everyone of our members who managed to attempt 90km after two years of lock-down."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4f1b91bce06b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "033b59f486850",
+          "_type": "span",
+          "marks": ["strong"],
+          "text": "Congratulations to each and everyone of you and to the one’s who reached the next “milestone”."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "48d938ec5e5e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ba986848e64c0",
+          "_type": "span",
+          "marks": [],
+          "text": "29th Completed Comrades:"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "46104ddd4167",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "567302bbb982",
+          "_type": "span",
+          "marks": [],
+          "text": "Willie Zwane"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bed1e8efe6ca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6514a1bb78c2",
+          "_type": "span",
+          "marks": [],
+          "text": "Johan van Dyk "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e0988737473f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4b8610daf67c",
+          "_type": "span",
+          "marks": [],
+          "text": "Philly Zulu"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ce448a20ce1d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e7ce20136ef0",
+          "_type": "span",
+          "marks": [],
+          "text": "Silver Medals were not the order for the day for RAC. But Thapelo Leseyane was once again RAC’s first Man home in a 07:40:43 followed by Mario Balaza in 08:08:47"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9c958c68a189",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e525a90d0a2a0",
+          "_type": "span",
+          "marks": [],
+          "text": "Martine Baker led the way for the Ladies in a 08:34:08 with Tracey Akeroyd shortly behind in 08:47:10"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44fa5226829b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5b8ed8663ba70",
+          "_type": "span",
+          "marks": [],
+          "text": "Double green was achieved by the 3 RAC’s  "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b11b01f47184",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4fddf2e1eaef",
+          "_type": "span",
+          "marks": [],
+          "text": "Elias Bokaba – 08:41:17; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a368d0eadd7d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b603cab8d391",
+          "_type": "span",
+          "marks": [],
+          "text": "Trust Kwena Langa – 09:56:32; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "72029325b6c3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c8160b627fb9",
+          "_type": "span",
+          "marks": [],
+          "text": "Victor Mngomezulu – 10:57:54."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1b731ac148c7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1e33cda2d0490",
+          "_type": "span",
+          "marks": [],
+          "text": "Six new Green Numbers were achieved – Congratulations to you all."
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "e66744db4b00",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "31fd661851520",
+          "_type": "span",
+          "marks": [],
+          "text": "Gareth Powrie – 08:49:42; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a0c74d3e4060",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c5931ee039b6",
+          "_type": "span",
+          "marks": [],
+          "text": "Thato Sello – 09:52:47; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0284ec6da619",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "30ec79ac4063",
+          "_type": "span",
+          "marks": [],
+          "text": "Lucas Mothupi – 10:02:52; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cadc396cc7dd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2732545c610f",
+          "_type": "span",
+          "marks": [],
+          "text": "Alfy Legwale – 10:33:19; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "602dd6a14d1b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0136829d3303",
+          "_type": "span",
+          "marks": [],
+          "text": "Maite Sebolai – 11:12:25; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5d11ee06662d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "25a5b14ddc1c",
+          "_type": "span",
+          "marks": [],
+          "text": "Andrew VD Molen – 11:48:24."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1da0dd59d4c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9afde71ac5ae0",
+          "_type": "span",
+          "marks": [],
+          "text": "The first trip from Maritzburg to Durban was achieved by 17 RACers. Congratulations and well done. Two have started their Comrades trips with Bill Rowans – Jonathan Sack – 08:48:32 and Karabo Sibeko – 08:57:34"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7467e2c51b3f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "06f428cf86090",
+          "_type": "span",
+          "marks": [],
+          "text": "The sub 10hours runners were "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "10d80ccb07fd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f5ca7b20c694",
+          "_type": "span",
+          "marks": [],
+          "text": "Hanna Maidment – 09:12:35;"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6ef51307ec6b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5347bdbcb975",
+          "_type": "span",
+          "marks": [],
+          "text": "Michael Pfeffer – 09:39:42; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2081bfc8dc68",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6f0f79a5c3aa",
+          "_type": "span",
+          "marks": [],
+          "text": "Louise Lewis – 09:40:43; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "efef9f666fc2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "37be2f4775b1",
+          "_type": "span",
+          "marks": [],
+          "text": "Quintell Schoeman – 09:54:34; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "64afc2505bc3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d803255c0c76",
+          "_type": "span",
+          "marks": [],
+          "text": "Faye Darby -09:56:06; plus the Youngest runner (turned 20 on 10 August) Pierre van Dyk – 10:52:48."
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "59dd2ba0e31c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73cd1ae13d430",
+          "_type": "span",
+          "marks": [],
+          "text": "Finally the sub 12 hour novices: "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bbcaf48ae310",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "88e310cad06f",
+          "_type": "span",
+          "marks": [],
+          "text": "Lazarus Modemba – 11:10:45; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a32f86e78f8d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "343545db602c",
+          "_type": "span",
+          "marks": [],
+          "text": "Lauren Henderson – 11:19:07; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "331cb9c0b421",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2828e382fb3a",
+          "_type": "span",
+          "marks": [],
+          "text": "Karlien Du Plessis – 11:32:23; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1d37a46faa05",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "66afcdb9a7b4",
+          "_type": "span",
+          "marks": [],
+          "text": "Rob Drennan – 11:33:40; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "579a8ecad552",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0cd5f79ea453",
+          "_type": "span",
+          "marks": [],
+          "text": "Wendy Armstrong - 11:36:54; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fe092110dbed",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "081e0ca35602",
+          "_type": "span",
+          "marks": [],
+          "text": "Sarah Harrison – 11:39:09; Sean Clarke – 11:48:30; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ddb6bf92cf77",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "256b39937ef4",
+          "_type": "span",
+          "marks": [],
+          "text": "Simon Drennan – 11:48:30; "
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "10a6d6f321b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4d20ddaa79d9",
+          "_type": "span",
+          "marks": [],
+          "text": "Andreas Kruger (running with his Mum, Karen) – 11:51:16;"
+        }
+      ],
+      "level": 1,
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a387cc251b3a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "38828c86fd950",
+          "_type": "span",
+          "marks": [],
+          "text": "To all of you – the first is now done, here comes the back-to-back medal."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8ede07c81f68",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8a1834a2c9fa0",
+          "_type": "span",
+          "marks": [],
+          "text": "RAC have 4 additional runners who have joined other Members to get the “key of the Road Medal”. “What medal is that” – you ask. Maritjie van Dyk – 10:26:31; Samuel Mogudi – 11:13:46; Ivan Dlamini – 11:39:00, - all completed their 21st Comrades run"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "mainImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-c6621f455ee9a34f2ab4086513ae8932ef4a9540-1200x800-jpg",
+      "_type": "reference"
+    },
+    "crop": {
+      "_type": "sanity.imageCrop",
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0
+    },
+    "hotspot": {
+      "_type": "sanity.imageHotspot",
+      "height": 0.357233946275042,
+      "width": 0.592465753424657,
+      "x": 0.5,
+      "y": 0.5
+    }
+  },
+  "publishedAt": "2022-12-12T11:43:00.000Z",
+  "slug": {
+    "_type": "slug",
+    "current": "comrades-2022"
+  },
+  "title": "Comrades 2022",
+  "_updatedAt": "2022-12-12T12:26:56.545Z"
+}
