@@ -4,10 +4,11 @@ import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import heroImg from "../../assets/toughone22.jpg";
+import Card from "./Card";
 import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
-const Hero = ({ heading, message }) => {
+const Hero = ({ heading, message, image }) => {
   // create a client instance
   const client = sanityClient({
     projectId: "yavqngwf",
@@ -95,44 +96,24 @@ const Hero = ({ heading, message }) => {
   //   backgroundPosition: `50% 55%`,
   //   backgroundSize: `cover`,
   // };
-
+  const styling = {
+    backgroundImage: `url(${image.src})`,
+  };
   return (
     <>
-      <div
-        // style={styling}
-        className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover hero-img"
+      <header
+        className="w-full h-screen bg-cover bg-center flex justify-center items-center"
+        style={styling}
       >
-        {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 " /> */}
-        <div className="p-5 text-white  z-[2] mt-[-10rem]">
-          {/* glassmorphism card start */}
-          <div className="Card mt-20 animated z-10 rounded-xl backdrop-blur-lg border-[1px] border-[#5353532c] shadow-2xl shadow-black bg-[#1414143d] w-[330px] h-[300px] md:w-[500px] md:h-[250px] flex flex-col overflow-hidden">
-            <div className="text-white flex justify-between mx-auto w-[80%] h-[35%]">
-              <div className="flex flex-row gap-1 items-center">
-                <div className="text-3xl text-white font-bold">{heading}</div>
-              </div>
-            </div>
-
-            <div className="text-center py-5 text-xl font-mono">{message}</div>
-
-            <div className="mx-auto flex flex-row justify-around w-[18em] h-[25%] hoverable">
-              <BsInstagram
-                className="w-[1.15em] media"
-                onClick={() =>
-                  window.open("https://www.instagram.com/randathleticclub/")
-                }
-              />
-              <FaFacebookSquare
-                className="w-[1.5] media"
-                onClick={() =>
-                  window.open("https://www.facebook.com/randathleticclub/")
-                }
-              />
-            </div>
-          </div>
-
-          {/* glassmorphism end */}
+        <div className="flex flex-col justify-center items-center">
+          <h1 className=" text-center text-5xl text-white font-bold drop-shadow-lg">
+            {heading}
+          </h1>
+          <p className="mt-5 text-center text-lg text-white opacity-70">
+            {message}
+          </p>
         </div>
-      </div>
+      </header>
     </>
   );
 };

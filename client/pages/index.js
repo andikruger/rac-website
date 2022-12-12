@@ -7,6 +7,7 @@ import Instagram from "../components/InstagramGallery/Instagram";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Calendar from "../components/Calandar";
 import { toast } from "react-toastify";
+import heroImg from "../assets/areal.jpg";
 import "react-toastify/dist/ReactToastify.css";
 
 // test
@@ -42,7 +43,7 @@ const Home = () => {
         Description: `You can get more information on the <a class="hover rac-colour text-bold" href="/race/${item.slug.current}" target="_blank">Race Page</a>`,
       };
     });
-    console.log(dateObj);
+
     setData(dateObj);
   };
 
@@ -68,7 +69,11 @@ const Home = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Hero heading="Rand Athletic Club" message="Running afta criminaals" />
+        <Hero
+          heading="Rand Athletic Club"
+          message="Running afta criminaals"
+          image={heroImg}
+        />
         {/* <Slider slides={SliderData} /> */}
 
         <Instagram />

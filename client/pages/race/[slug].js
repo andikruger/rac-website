@@ -16,12 +16,11 @@ const RaceView = () => {
     if (!data) {
       const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22race%22%20%26%26%20slug.current%20%3D%3D%20%24slug%20%5D&%24slug=%22${slug}%22`;
       axios.get(url).then((res) => {
+        console.log("called");
         setData(res.data.result[0]);
       });
     }
   }, [data]);
-
-  console.log(data);
 
   // const google_maps_url = `https://maps.google.com/maps?q=${raceData.startLocation.lat},${raceData.startLocation.lng}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
 

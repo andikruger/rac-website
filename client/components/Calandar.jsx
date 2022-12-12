@@ -26,7 +26,6 @@ const Calendar = (data) => {
 
   // selectedDate is current date + 1 month
   const selectedDate = new Date();
-  selectedDate.setMonth(selectedDate.getMonth() + 1);
 
   function onEventRendered(args) {
     let categoryColor = args.data.CategoryColor;
@@ -48,11 +47,11 @@ const Calendar = (data) => {
           eventRendered={onEventRendered.bind(this)}
         >
           <ViewsDirective>
-            {["Week", "Month"].map((item) => (
+            {["Month", "Week"].map((item) => (
               <ViewDirective key={item} option={item} />
             ))}
           </ViewsDirective>
-          <Inject services={[Week, Month]} />
+          <Inject services={[Month, Week]} />
         </ScheduleComponent>
       </div>
     </div>
