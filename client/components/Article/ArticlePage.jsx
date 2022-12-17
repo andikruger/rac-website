@@ -20,7 +20,7 @@ const Article = ({ data }) => {
   const image = urlFor(data.mainImage).width(3000).url();
   const seo = {
     metaTitle: data.title,
-    metaDescription: data.title,
+    metaDescription: data.blurb,
     shareImage: image,
     article: true,
   };
