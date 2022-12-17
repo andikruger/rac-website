@@ -1,6 +1,6 @@
 import React from "react";
 import PortableText from "react-portable-text";
-import doc from "./doc.json";
+
 import HeroArticle from "../../components/Hero/HeroArticle";
 
 import Seo from "../../components/seo";
@@ -16,11 +16,11 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-const Article = () => {
-  const image = urlFor(doc.mainImage).width(3000).url();
+const Article = ({ data }) => {
+  const image = urlFor(data.mainImage).width(3000).url();
   const seo = {
-    metaTitle: doc.title,
-    metaDescription: doc.title,
+    metaTitle: data.title,
+    metaDescription: data.title,
     shareImage: image,
     article: true,
   };
@@ -85,7 +85,7 @@ const Article = () => {
   return (
     <>
       <Seo seo={seo} />
-      <HeroArticle heading={doc.title} message="" image={image} />
+      <HeroArticle heading={data.title} message="" image={image} />
       <div className="bg-gray-200 p-4">
         {/* start */}
         {/* create a white card with a shadow effect */}
@@ -93,7 +93,7 @@ const Article = () => {
           <div className="flex flex-col md:flex-row justify-center items-center">
             <PortableText
               // Pass in block content straight from Sanity.io
-              content={doc.body}
+              content={data.body}
               // Optionally override marks, decorators, blocks, etc. in a flat
               // structure without doing any gymnastics
               serializers={serializers}

@@ -18,6 +18,12 @@ export default {
       },
     },
     {
+      name: "blurb",
+      title: "Blurb",
+      type: "string",
+      description: "A short summary of the post",
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",
