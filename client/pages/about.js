@@ -9,7 +9,7 @@ import team from "../assets/about/Team.jpg";
 import fordyce from "../assets/about/BruceFordyce.jpg";
 import bob from "../assets/about/BobDeLaMotte.jpg";
 import sonja from "../assets/about/SonjaLaxton.jpg";
-import heroImg from "../assets/memberphoto.jpg";
+import heroImg from "../assets/areal.jpg";
 import Quote from "../components/Quote";
 import AboutCardLeft from "../components/About/AboutCardLeft";
 import AboutCardRight from "../components/About/AboutCardRight";

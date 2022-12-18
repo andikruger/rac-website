@@ -3,14 +3,14 @@ import HeroSmall from "../../components/Hero/HeroSmall";
 import Image from "next/image";
 import timetrial5km from "../../assets/timetrial5km.jpg";
 import timetrial8km from "../../assets/timetrial8km.jpg";
-import heroImg from "../../assets/memberphoto.jpg";
+import heroImg from "../../assets/crosscountry.jpg";
 
 const About = () => {
   const year = new Date().getFullYear();
   return (
     <>
       <Head>
-        <title>About Us | Cross Country</title>
+        <title>Cross Country | Cross Country</title>
         <meta
           name="description"
           content="Created as template for future work"

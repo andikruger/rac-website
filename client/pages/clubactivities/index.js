@@ -16,7 +16,7 @@ const About = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeroSmall heading="Time Trials" message="" image={heroImg} />
+      <HeroSmall heading="Club Activities" message="" image={heroImg} />
       <div className="bg-gray-200">
         {/* start */}
         <div className="">

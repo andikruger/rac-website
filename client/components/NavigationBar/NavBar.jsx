@@ -21,6 +21,15 @@ const NavBar = () => {
     setNav(!nav);
   };
 
+  const handleHover = () => {
+    const dropdown = document.querySelector(".dropdown");
+    dropdown.classList.toggle("hidden");
+  };
+  const handleDropdown = () => {
+    const dropdown = document.querySelector(".dropdown");
+    dropdown.classList.remove("hidden");
+  };
+
   useEffect(() => {
     if (localStorage.getItem("token")) {
       setIsLoggedIn(true);
@@ -206,10 +215,31 @@ const NavBar = () => {
                   About us
                 </Link>
               </li>
-              <li className="p-4">
+              <li onMouseOverCapture={handleHover} className="p-4">
                 <Link className="hover" href="/clubactivities">
                   Club Activities
                 </Link>
+                {/* on hover display a dropdown */}
+                <div
+                  onMouseEnter={handleDropdown}
+                  className="dropdown absolute hidden group-hover:block"
+                >
+                  <ul className="bg-white shadow-lg rounded-lg">
+                    <li className="p-4">
+                      <Link className="hover" href="/clubactivities/timetrial">
+                        Time Trial
+                      </Link>
+                    </li>
+                    <li className="p-4">
+                      <Link
+                        className="hover"
+                        href="/clubactivities/crosscountry"
+                      >
+                        Cross Country
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className="p-4">
                 <Link className="hover" href="/membership">
