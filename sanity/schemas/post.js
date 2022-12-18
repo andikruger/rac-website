@@ -42,6 +42,12 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "membersOnly",
+      title: "Members Only",
+      type: "boolean",
+      description: "Is this post for members only?",
+    },
   ],
 
   preview: {

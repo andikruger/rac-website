@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import IgImg1 from "../../assets/img-1.jpeg";
-import IgImg2 from "../../assets/img-2.jpeg";
-import IgImg3 from "../../assets/img-3.jpeg";
-import IgImg4 from "../../assets/img-4.jpeg";
-import IgImg5 from "../../assets/img-5.jpeg";
-import IgImg6 from "../../assets/img-6.jpeg";
+import IgImg1 from "../../assets/instagram/instagram_preview1.png";
+import IgImg2 from "../../assets/instagram/instagram_preview2.png";
+import IgImg3 from "../../assets/instagram/instagram_preview3.png";
+import IgImg4 from "../../assets/instagram/instagram_preview4.jpg";
+import IgImg5 from "../../assets/instagram/instagram_preview5.jpg";
+import IgImg6 from "../../assets/instagram/instagram_preview6.jpg";
 import InstagramImg from "./InstagramImg";
 import axios from "axios";
 
@@ -18,8 +18,6 @@ const Instagram = () => {
   let done = false;
 
   let response = undefined;
-
-  console.log(data);
 
   return (
     <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4 bg-white rounded-lg">

@@ -106,7 +106,7 @@ const Hero = ({ heading, message, image }) => {
         style={styling}
       >
         <div className="flex flex-col justify-center items-center">
-          <h1 className=" text-center text-5xl text-white font-bold drop-shadow-lg">
+          <h1 className=" text-center text-6xl text-white font-bold drop-shadow-lg">
             {heading}
           </h1>
           <p className="mt-5 text-center text-lg text-white opacity-70">

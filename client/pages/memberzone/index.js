@@ -25,7 +25,9 @@ const Memberzone = () => {
     if (!data) {
       const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D`;
       axios.get(url).then((res) => {
-        setData(res.data.result);
+        // reverse res.data.result to show latest first
+        let reversed = res.data.result.reverse();
+        setData(reversed);
       });
     }
   }, [data]);

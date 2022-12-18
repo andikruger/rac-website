@@ -3,7 +3,7 @@ import HeroSmall from "../../components/Hero/HeroSmall";
 import Image from "next/image";
 import timetrial5km from "../../assets/timetrial5km.jpg";
 import timetrial8km from "../../assets/timetrial8km.jpg";
-import heroImg from "../../assets/memberphoto.jpg";
+import heroImg from "../../assets/areal.jpg";
 
 const About = () => {
   return (

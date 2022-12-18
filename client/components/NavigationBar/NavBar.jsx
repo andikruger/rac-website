@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("white");
+  const [textColor, setTextColor] = useState("#67162c");
   const [shaddow, setShaddow] = useState("none");
   const [classes, setClasses] = useState(
     "fixed left-0 top-0 w-full z-20 ease-in duration-300 glass-nav"
@@ -33,11 +33,11 @@ const NavBar = () => {
           "fixed left-0 top-0 w-full z-20 ease-in duration-300 glass-nav"
         );
         setColor("transparent");
-        setTextColor("#ffffff");
+        setTextColor("#67162c");
         setShaddow("0px 4px 4px rgba(0, 0, 0, 0.25)");
       } else {
         setColor("transparent");
-        setTextColor("#ffffff");
+        setTextColor("#67162c");
         setShaddow("none");
       }
       if (window.scrollY >= 400) {
@@ -62,7 +62,7 @@ const NavBar = () => {
           }}
           className={classes}
         >
-          <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+          <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-[#67162c]">
             <Link className="branding-hover" href="/">
               <h1
                 style={{ color: `${textColor}` }}
@@ -87,7 +87,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="p-4">
-                <Link className="hover" href="/#portfolio">
+                <Link className="hover" href="/races">
                   Races
                 </Link>
               </li>
@@ -142,7 +142,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#portfolio">
+                  <Link className="hover" href="/clubactivities">
                     Club Activities
                   </Link>
                 </li>
@@ -150,7 +150,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#portfolio">
+                  <Link className="hover" href="/membership">
                     Membership
                   </Link>
                 </li>
@@ -158,7 +158,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#portfolio">
+                  <Link className="hover" href="/races">
                     Races
                   </Link>
                 </li>
@@ -182,7 +182,7 @@ const NavBar = () => {
           }}
           className={classes}
         >
-          <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+          <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-[#67162c]">
             <Link className="branding-hover" href="/">
               <h1
                 style={{ color: `${textColor}` }}
@@ -207,17 +207,17 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="p-4">
-                <Link className="hover" href="/#portfolio">
+                <Link className="hover" href="/clubactivities">
                   Club Activities
                 </Link>
               </li>
               <li className="p-4">
-                <Link className="hover" href="/#portfolio">
+                <Link className="hover" href="/membership">
                   Membership
                 </Link>
               </li>
               <li className="p-4">
-                <Link className="hover" href="/#portfolio">
+                <Link className="hover" href="/races">
                   Races
                 </Link>
               </li>
@@ -270,7 +270,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#portfolio">
+                  <Link className="hover" href="/clubactivities">
                     Club Activities
                   </Link>
                 </li>
@@ -278,7 +278,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#portfolio">
+                  <Link className="hover" href="/membership">
                     Membership
                   </Link>
                 </li>
@@ -286,7 +286,7 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/#portfolio">
+                  <Link className="hover" href="/races">
                     Races
                   </Link>
                 </li>
