@@ -10,9 +10,6 @@ import { toast } from "react-toastify";
 import heroImg from "../assets/memberphoto.jpg";
 import "react-toastify/dist/ReactToastify.css";
 
-// test
-import { scheduleData } from "../pages/test/dummy";
-
 const Home = () => {
   return (
     <>

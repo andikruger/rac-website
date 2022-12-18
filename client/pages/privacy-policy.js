@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Hero from "../components/Hero/Hero";
+import HeroSmall from "../components/Hero/HeroSmall";
+import heroImg from "../assets/clubhouse.jpg";
 
 const Privacy = () => {
   return (
@@ -12,7 +13,7 @@ const Privacy = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero heading="Privacy Policy" message="" />
+      <HeroSmall heading="Privacy Policy" message="" image={heroImg} />
 
       <div>
         <h1 className="text-2xl font-bold text-center p-4 m-4 py-0">

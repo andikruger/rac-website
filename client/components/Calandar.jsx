@@ -14,7 +14,6 @@ import {
 } from "@syncfusion/ej2-react-schedule";
 import { DatePickerComponent } from "@syncfusion/ej2-react-calendars";
 import { registerLicense } from "@syncfusion/ej2-base";
-import { scheduleData } from "../pages/test/dummy";
 
 // eslint-disable-next-line react/destructuring-assignment
 registerLicense(

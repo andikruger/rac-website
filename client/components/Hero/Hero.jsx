@@ -11,6 +11,7 @@ import imageUrlBuilder from "@sanity/image-url";
 const Hero = ({ heading, message, image }) => {
   // create a client instance
   const client = sanityClient({
+    apiVersion: "v1",
     projectId: "yavqngwf",
     dataset: "production",
     useCdn: true,
