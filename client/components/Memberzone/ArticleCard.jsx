@@ -33,7 +33,7 @@ const ArticleCard = ({ data }) => {
           </p>
           <div className="flex items-center justify-center w-full mt-4">
             <Link legacyBehavior href={`/article/${data.slug.current}`}>
-              <a className="px-4 mb-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600">
+              <a className="px-4 mb-4 py-2 text-sm font-medium text-white hover:text-white bg-[#67162c] rounded-md hover:bg-[#470819]">
                 Read More
               </a>
             </Link>

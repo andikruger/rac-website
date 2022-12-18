@@ -2,6 +2,7 @@ import Head from "next/head";
 import HeroSmall from "../components/Hero/HeroSmall";
 import ContactForm from "../components/Contact/Contact";
 import heroImg from "../assets/clubhouse.jpg";
+import Link from "next/link";
 const Contact = () => {
   return (
     <>
@@ -25,9 +26,12 @@ const Contact = () => {
               Vreni Welch
             </h2>
             <p className="text-lg font-bold text-center p-4 m-4 py-0">
-              Tel: 011 234 5678
+              <a className="rac-colour hover" href="tel:+27114428256">
+                {" "}
+                Tel: 011 442 8256
+              </a>
             </p>
-            <p className="text-lg font-bold text-center p-4 m-4 py-0">
+            <p className="text-lg font-bold text-center p-4 m-4 py-0 rac-colour">
               Email:{" "}
               <a
                 href="mailto:randathletic@iafrica.com
@@ -38,7 +42,7 @@ const Contact = () => {
               </a>
             </p>
             {/* phisical address */}
-            <p className="text-lg font-bold text-center p-4 m-4 py-0">
+            <p className="text-lg font-bold text-center p-4 m-4 py-0 rac-colour">
               Address: 1 Garden Road Bordeaux Johannesburg 2194
             </p>
 

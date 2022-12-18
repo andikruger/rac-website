@@ -47,11 +47,11 @@ const Calendar = (data) => {
           eventRendered={onEventRendered.bind(this)}
         >
           <ViewsDirective>
-            {["Month", "Week"].map((item) => (
+            {["Month"].map((item) => (
               <ViewDirective key={item} option={item} />
             ))}
           </ViewsDirective>
-          <Inject services={[Month, Week]} />
+          <Inject services={[Month]} />
         </ScheduleComponent>
       </div>
     </div>
