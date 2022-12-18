@@ -95,7 +95,7 @@ const Races = () => {
   return (
     <>
       <Head>
-        <title>Contact Us | Rand Athletic Club</title>
+        <title>Races | Rand Athletic Club</title>
         <meta
           name="description"
           content="Created as template for future work"
