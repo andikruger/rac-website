@@ -32,7 +32,6 @@ handler.post(async (req, res) => {
         name: user.name,
       });
       // redirect to home page
-      res.redirect("/");
     } else {
       res
         .status(401)
