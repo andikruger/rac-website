@@ -27,7 +27,7 @@ const NavBar = () => {
   };
   const handleDropdown = () => {
     const dropdown = document.querySelector(".dropdown");
-    dropdown.classList.remove("hidden");
+    dropdown.classList.toggle("hidden");
   };
 
   useEffect(() => {
@@ -148,12 +148,10 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li
-                  onClick={handleNav}
+                  onClick={handleDropdown}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/clubactivities">
-                    Club Activities
-                  </Link>
+                  <p className="hover">Club Activities</p>
                 </li>
                 <li
                   onClick={handleNav}
@@ -215,22 +213,22 @@ const NavBar = () => {
                   About us
                 </Link>
               </li>
-              <li onMouseOverCapture={handleHover} className="p-4">
-                <Link className="hover" href="/clubactivities">
+              <li onClick={handleDropdown} className="p-4">
+                <Link className="hover" href="#">
                   Club Activities
                 </Link>
                 {/* on hover display a dropdown */}
                 <div
-                  onMouseEnter={handleDropdown}
+                  onClick={handleDropdown}
                   className="dropdown absolute hidden group-hover:block"
                 >
                   <ul className="bg-white shadow-lg rounded-lg">
-                    <li className="p-4">
+                    <li className="p-4" onClick={handleDropdown}>
                       <Link className="hover" href="/clubactivities/timetrial">
                         Time Trial
                       </Link>
                     </li>
-                    <li className="p-4">
+                    <li className="p-4" onClick={handleDropdown}>
                       <Link
                         className="hover"
                         href="/clubactivities/crosscountry"
