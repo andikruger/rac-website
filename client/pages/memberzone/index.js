@@ -113,6 +113,28 @@ const Memberzone = () => {
       </Head>
 
       <HeroSmall heading="One of us" message="" image={heroImg} />
+      <div className="flex flex-row rounded-lg shadow-lg m-4 bg-white">
+        <div className="w-full">
+          <h2 className="text-3xl font-bold rac-colour text-center text-bold text-strong m-4">
+            RAC Kit Shop
+          </h2>
+          <p className="text-center text-lg text-gray-500 m-4">
+            RAC kit is available to purchase from{" "}
+            <a
+              href="https://kitonline.co.za/rand-athletics-club/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover rac-colour"
+            >
+              Kitonline
+            </a>
+          </p>
+          <p className="text-center text-lg text-gray-500 m-4">
+            Use this password to access the shop:{" "}
+            <span className="rac-colour">mKQtNFPA6v</span>
+          </p>
+        </div>
+      </div>
 
       {/* iterate over the data array */}
       {data &&
