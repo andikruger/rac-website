@@ -40,7 +40,7 @@ handler.post(async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.status(500).send({ success: false, message: error.message });
+    res.status(500).send({ success: false, message: error });
   }
   // if status is 500, send error message
 });
