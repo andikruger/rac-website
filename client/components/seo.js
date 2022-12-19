@@ -12,7 +12,7 @@ const Seo = ({ seo }) => {
   const fullSeo = {
     ...seoWithDefaults,
     // Add title suffix
-    metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
+    metaTitle: `${seoWithDefaults.metaTitle} | Rand Athletic Club`,
     // Get full image URL
     shareImage: seoWithDefaults.shareImage,
   };

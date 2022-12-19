@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Article from "../../components/Article/ArticlePage";
-const RaceView = () => {
+const ArticleView = () => {
   // get the slug from the url theory
   const router = useRouter();
   const { slug } = router.query;
@@ -18,10 +18,6 @@ const RaceView = () => {
     }
   }, [data]);
 
-  // const google_maps_url = `https://maps.google.com/maps?q=${raceData.startLocation.lat},${raceData.startLocation.lng}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
-
-  //add a "km to every distance in the array"
-
   return data && <Article data={data} />;
 };
-export default RaceView;
+export default ArticleView;

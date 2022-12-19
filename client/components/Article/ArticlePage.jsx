@@ -18,10 +18,11 @@ function urlFor(source) {
 
 const Article = ({ data }) => {
   const image = urlFor(data.mainImage).width(3000).url();
+  const shareImage = urlFor(data.mainImage).width(200).url();
   const seo = {
     metaTitle: data.title,
     metaDescription: data.blurb,
-    shareImage: image,
+    shareImage: shareImage,
     article: true,
   };
 
