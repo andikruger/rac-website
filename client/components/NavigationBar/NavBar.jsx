@@ -21,13 +21,14 @@ const NavBar = () => {
     setNav(!nav);
   };
 
-  const handleHover = () => {
-    const dropdown = document.querySelector(".dropdown");
-    dropdown.classList.toggle("hidden");
-  };
   const handleDropdown = () => {
     const dropdown = document.querySelector(".dropdown");
     dropdown.classList.toggle("hidden");
+  };
+
+  const handleMobileDropdown = () => {
+    const mobileDropdown = document.querySelector(".mobile-dropdown");
+    mobileDropdown.classList.toggle("hidden");
   };
 
   useEffect(() => {
@@ -143,30 +144,25 @@ const NavBar = () => {
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/about">
-                    About us
+                  <Link className="hover" href="/memberzone">
+                    Memberzone
                   </Link>
                 </li>
-                <li
-                  onClick={handleDropdown}
-                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
-                >
-                  <p className="hover">Club Activities</p>
-                </li>
-                <li
-                  onClick={handleNav}
-                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
-                >
-                  <Link className="hover" href="/membership">
-                    Membership
-                  </Link>
-                </li>
+
                 <li
                   onClick={handleNav}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
                   <Link className="hover" href="/races">
                     Races
+                  </Link>
+                </li>
+                <li
+                  onClick={handleNav}
+                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
+                >
+                  <Link className="hover" href="/memberzone/profile">
+                    Profile
                   </Link>
                 </li>
                 <li
@@ -295,12 +291,37 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li
-                  onClick={handleNav}
+                  onClick={handleMobileDropdown}
+                  onTouchStart={handleMobileDropdown}
                   className="p-4 text-4xl hover:text-gray-500 rac-colour"
                 >
-                  <Link className="hover" href="/clubactivities">
+                  <Link className="hover" href="#">
                     Club Activities
                   </Link>
+                  {/* on hover display a dropdown */}
+
+                  <div className="mobile-dropdown hidden absolute">
+                    <ul className="bg-white shadow-lg rounded-lg">
+                      <li className="p-4">
+                        <Link
+                          onClick={handleNav}
+                          className="hover"
+                          href="/clubactivities/timetrial"
+                        >
+                          Time Trial
+                        </Link>
+                      </li>
+                      <li className="p-4">
+                        <Link
+                          onClick={handleNav}
+                          className="hover"
+                          href="/clubactivities/crosscountry"
+                        >
+                          Cross Country
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li
                   onClick={handleNav}
