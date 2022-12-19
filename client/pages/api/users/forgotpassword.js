@@ -10,7 +10,7 @@ const handler = nc();
 
 handler.post(async (req, res) => {
   const user = await client.fetch(`*[_type == "user" && email == $email][0]`, {
-    email: req.body.email,
+    email: req.body.email.toLowerCase(),
   });
 
   if (user) {

@@ -6,8 +6,9 @@ import client from "../../../utils/client";
 const handler = nc();
 
 handler.post(async (req, res) => {
+  const email = req.body.email.toLowerCase();
   const user = await client.fetch(`*[_type == "user" && email == $email][0]`, {
-    email: req.body.email,
+    email: email,
   });
 
   if (

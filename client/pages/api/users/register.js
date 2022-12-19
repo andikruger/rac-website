@@ -8,6 +8,8 @@ import client from "../../../utils/client";
 const handler = nc();
 
 handler.post(async (req, res) => {
+  // turn the email into a lowercase string
+  const email = req.body.email.toLowerCase();
   const projectId = config.projectId;
   const dataset = config.dataset;
   const tokenWithWriteAccess =
@@ -17,7 +19,7 @@ handler.post(async (req, res) => {
       create: {
         _type: "user",
         name: req.body.name,
-        email: req.body.email,
+        email: email,
         password: bcrypt.hashSync(req.body.password),
         isAdmin: false,
         isBanned: false,
@@ -27,7 +29,7 @@ handler.post(async (req, res) => {
   const existUser = await client.fetch(
     `*[_type == "user" && email == $email][0]`,
     {
-      email: req.body.email,
+      email: email,
     }
   );
   if (existUser) {
@@ -49,7 +51,7 @@ handler.post(async (req, res) => {
   const user = {
     _id: userId,
     name: req.body.name,
-    email: req.body.email,
+    email: email,
     isAdmin: false,
     isBanned: false,
     resetPasswordToken: "inittoken",

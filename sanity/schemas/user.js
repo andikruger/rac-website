@@ -20,10 +20,21 @@ export default {
       type: "string",
     },
     {
+      name: "phone",
+      title: "Phone",
+      type: "string",
+    },
+    {
+      name: "dateofjoining",
+      title: "Date of Joining",
+      type: "date",
+    },
+    {
       name: "licenseNumber",
       title: "License Number",
       type: "string",
     },
+
     {
       name: "isBanned",
       title: "Is Banned",

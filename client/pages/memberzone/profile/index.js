@@ -1,12 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import heroImg from "../../../assets/toughone22.jpg";
+import jwt from "jsonwebtoken";
+import axios from "axios";
 
 const Profile = ({ heading, message }) => {
+  const [user, setUser] = useState({});
+  const [data, setData] = useState(null);
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    const decoded = jwt.decode(token);
+    setUser(decoded);
+    if (!data) {
+      const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22user%22%20%26%26%20email%20%3D%3D%20%24email%20%5D&%24email=%22${decoded.email}%22`;
+      axios.get(url).then((res) => {
+        setData(res.data.result[0]);
+      });
+    }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -67,57 +80,61 @@ const Profile = ({ heading, message }) => {
     backgroundImage: `url(${heroImg.src})`,
   };
 
+  console.log(data);
+
   return (
-    <>
-      <div
-        style={styling}
-        className="flex items-center justify-center  h-screen mb-12 bg-fixed bg-center bg-cover"
-      >
-        {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 " /> */}
-        <div className="p-5 text-white  z-[2] mt-[-10rem]">
-          {/* glassmorphism card start */}
-          {/* create a profile card with avatar in glassmorphism */}
-          <div className="Card flex flex-col items-center pt-6 w-96 h-96 bg-white rounded-3xl shadow-2xl glass-nav">
-            <div className="flex flex-col items-center justify-center w-24 h-24 bg-white rounded-full shadow-2xl">
-              <img
-                src="https://ui-avatars.com/api/?name=Andi+Kruger&rounded=true&size=256"
-                alt="avatar"
-                className="w-20 h-20 rounded-full"
-              />
-            </div>
-            <div className="flex flex-col items-center justify-center mt-4">
-              <h1 className="text-2xl font-semibold">Andreas Kr&uuml;ger</h1>
-              <h2 className="text-xl font-medium text-gray-500">
-                Member since 2001
-              </h2>
-            </div>
-            {/* add personal information */}
-            <div className="flex flex-col items-center justify-center mt-4">
-              <h2 className="text-xl font-medium text-gray-500">
-                <p>Email: andreas_kruger@hotmail.com</p>
-              </h2>
-              <h2 className="text-xl font-medium text-gray-500">
-                <p>Phone: +436643253500</p>
-              </h2>
+    data && (
+      <>
+        <div
+          style={styling}
+          className="flex items-center justify-center  h-screen mb-12 bg-fixed bg-center bg-cover"
+        >
+          {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 " /> */}
+          <div className="p-5 text-white  z-[2] mt-[-10rem]">
+            {/* glassmorphism card start */}
+            {/* create a profile card with avatar in glassmorphism */}
+            <div className="Card flex flex-col items-center pt-6 w-96 h-96 bg-white rounded-3xl shadow-2xl glass-nav">
+              <div className="flex flex-col items-center justify-center w-24 h-24 bg-white rounded-full shadow-2xl">
+                <img
+                  src={`https://ui-avatars.com/api/?name=${user.name}&rounded=true&size=256`}
+                  alt="avatar"
+                  className="w-20 h-20 rounded-full"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center mt-4">
+                <h1 className="text-2xl font-semibold">{user.name}</h1>
+                <h2 className="text-xl font-medium text-gray-500">
+                  Member since 2001
+                </h2>
+              </div>
+              {/* add personal information */}
+              <div className="flex flex-col items-center justify-center mt-4">
+                <h2 className="text-xl font-medium text-gray-500">
+                  <p>Email: {user.email}</p>
+                </h2>
+                <h2 className="text-xl font-medium text-gray-500">
+                  <p>Phone: {data.phone || "N/A"}</p>
+                </h2>
 
-              <h2 className="text-xl font-medium text-gray-500">
-                <p>License Number: 575</p>
-              </h2>
+                <h2 className="text-xl font-medium text-gray-500">
+                  <p>License Number: {data.licenseNumber || "N/A"}</p>
+                </h2>
+              </div>
+              {/* add an edit button  */}
+              <div className="flex flex-col items-center justify-center mt-4">
+                <Link legacyBehavior href="/memberzone/profile/edit">
+                  <a className="flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-[#67162c] rounded-md shadow-md hover:bg-[#470819] focus:outline-none focus:ring-2 focus:ring-[#470819] dark-hover focus:ring-offset-2 focus:ring-offset-white">
+                    Edit
+                  </a>
+                </Link>
+              </div>
             </div>
-            {/* add an edit button  */}
-            <div className="flex flex-col items-center justify-center mt-4">
-              <Link legacyBehavior href="/memberzone/profile/edit">
-                <a className="flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-[#67162c] rounded-md shadow-md hover:bg-[#470819] focus:outline-none focus:ring-2 focus:ring-[#470819] dark-hover focus:ring-offset-2 focus:ring-offset-white">
-                  Edit
-                </a>
-              </Link>
-            </div>
+
+            {/* glassmorphism end */}
           </div>
-
-          {/* glassmorphism end */}
         </div>
-      </div>
-    </>
+      </>
+    )
   );
 };
 
