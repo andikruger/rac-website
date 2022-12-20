@@ -6,6 +6,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import heroImg from "../../../assets/toughone22.jpg";
 import jwt from "jsonwebtoken";
 import axios from "axios";
+import moment from "moment";
 
 const Profile = ({ heading, message }) => {
   const [user, setUser] = useState({});
@@ -15,7 +16,7 @@ const Profile = ({ heading, message }) => {
     const decoded = jwt.decode(token);
     setUser(decoded);
     if (!data) {
-      const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22user%22%20%26%26%20email%20%3D%3D%20%24email%20%5D&%24email=%22${decoded.email}%22`;
+      const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22user%22%20%26%26%20_id%20%3D%3D%20%24_id%20%5D&%24_id=%22${decoded._id}%22`;
       axios.get(url).then((res) => {
         setData(res.data.result[0]);
       });
@@ -104,7 +105,10 @@ const Profile = ({ heading, message }) => {
               <div className="flex flex-col items-center justify-center mt-4">
                 <h1 className="text-2xl font-semibold">{user.name}</h1>
                 <h2 className="text-xl font-medium text-gray-500">
-                  Member since 2001
+                  Member since{" "}
+                  {data.dateofjoining
+                    ? moment(data.dateofjoining).format("MMMM YYYY")
+                    : "N/A"}
                 </h2>
               </div>
               {/* add personal information */}

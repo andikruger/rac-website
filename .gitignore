@@ -6,3 +6,6 @@ sanity/node_modules/
 
 sanity/config/@sanity/google-maps-input.json
 */google-maps-input.json
+client/.env
+.env
+*/.env
