@@ -43,9 +43,9 @@ handler.post(async (req, res) => {
     );
 
     const message = `
-        <h1>You have requested a password reset</h1>
+        <h2>You have requested a password reset</h2>
         <p>Please go to this link to reset your password</p>
-        <a href="${req.headers.origin}/resetpassword/${resetToken}" clicktracking=off>Reset Password</a>
+        <a href="${req.headers.origin}/auth/resetPassword/${resetToken}" clicktracking=off>Reset Password</a>
         `;
 
     try {
@@ -56,7 +56,7 @@ handler.post(async (req, res) => {
       });
       res.status(200).json({
         success: true,
-        message: "Email sent successfully",
+        message: "Email sent successfully, please check your spam folder too",
       });
     } catch (err) {
       console.log(err);
