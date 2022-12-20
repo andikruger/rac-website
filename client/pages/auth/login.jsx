@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -118,6 +119,9 @@ const Login = () => {
 
   return (
     <>
+      <Head>
+        <title>Login | Rand Athletic Club</title>
+      </Head>
       <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover login-img">
         {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 " /> */}
         <div className=" absolute p-5 text-white z-[2] mt-[-10rem]">

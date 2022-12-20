@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
 import heroImg from "../../../assets/toughone22.jpg";
@@ -86,6 +87,9 @@ const Profile = ({ heading, message }) => {
   return (
     data && (
       <>
+        <Head>
+          <title>Profile | Rand Athletic Club</title>
+        </Head>
         <div
           style={styling}
           className="flex items-center justify-center  h-screen mb-12 bg-fixed bg-center bg-cover"
