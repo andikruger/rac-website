@@ -290,38 +290,27 @@ const NavBar = () => {
                     About us
                   </Link>
                 </li>
-                <li
-                  onClick={handleMobileDropdown}
-                  onTouchStart={handleMobileDropdown}
-                  className="p-4 text-4xl hover:text-gray-500 rac-colour"
-                >
-                  <Link className="hover" href="#">
-                    Club Activities
+                {/* <li className="p-4 text-4xl hover:text-gray-500 rac-colour">
+                  Club Activities */}
+                {/* on hover display a dropdown */}
+                {/* </li> */}
+                <li className="p-4">
+                  <Link
+                    onClick={handleNav}
+                    className="hover text-4xl hover:text-gray-500 rac-colour"
+                    href="/clubactivities/timetrial"
+                  >
+                    Time Trial
                   </Link>
-                  {/* on hover display a dropdown */}
-
-                  <div className="mobile-dropdown hidden absolute">
-                    <ul className="bg-white shadow-lg rounded-lg">
-                      <li className="p-4">
-                        <Link
-                          onClick={handleNav}
-                          className="hover"
-                          href="/clubactivities/timetrial"
-                        >
-                          Time Trial
-                        </Link>
-                      </li>
-                      <li className="p-4">
-                        <Link
-                          onClick={handleNav}
-                          className="hover"
-                          href="/clubactivities/crosscountry"
-                        >
-                          Cross Country
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+                </li>
+                <li className="p-4">
+                  <Link
+                    onClick={handleNav}
+                    className="hover text-4xl hover:text-gray-500 rac-colour"
+                    href="/clubactivities/crosscountry"
+                  >
+                    Cross Country
+                  </Link>
                 </li>
                 <li
                   onClick={handleNav}
