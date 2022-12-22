@@ -59,7 +59,10 @@ handler.post(async (req, res) => {
   };
   const token = signToken(user);
 
-  res.send({ success: true, message: `Welcome to RAC ${user.name}` });
+  res.send({
+    success: true,
+    message: `Welcome to RAC ${user.name}, please allow up to a minute until the registration is compleated`,
+  });
 });
 
 export default handler;

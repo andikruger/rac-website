@@ -7,7 +7,8 @@ export default {
       name: "name",
       title: "Name",
       type: "string",
-      description: "The name of the race",
+      description: "The name of the race, please include the year",
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "slug",
@@ -17,6 +18,7 @@ export default {
         source: "name",
         maxLength: 96,
       },
+      description: "Please click the generate button to create the slug",
     },
     {
       name: "distance",
@@ -24,6 +26,7 @@ export default {
       type: "array",
       of: [{ type: "number" }],
       description: "The distance of the race in kilometers",
+      validation: (Rule) => Rule.required(),
     },
 
     {
@@ -31,12 +34,14 @@ export default {
       title: "Date",
       type: "date",
       description: "The date of the race",
+      validation: (Rule) => Rule.required(),
     },
 
     {
       title: "Venue",
       name: "venue",
       type: "string",
+      validation: (Rule) => Rule.required(),
     },
 
     {
@@ -56,6 +61,7 @@ export default {
       name: "startTime",
       type: "datetime",
       description: "The start time of the race",
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Club",
@@ -63,9 +69,10 @@ export default {
       type: "object",
       fields: [
         {
-          title: "Club Name",
+          title: "Club Name or Organiser",
           name: "clubName",
           type: "string",
+          validation: (Rule) => Rule.required(),
         },
         {
           title: "Contact Person",
@@ -104,6 +111,7 @@ export default {
         ],
         layout: "dropdown",
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       title: "Important Race",
