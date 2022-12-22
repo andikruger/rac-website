@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const contactForm = () => {
+  const sitekey = process.env.RECAPTCHA_SITE_KEY;
   const captchaRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -80,7 +81,7 @@ const contactForm = () => {
           onChange={handleInputChange}
         ></textarea>
         <ReCAPTCHA
-          sitekey={process.env.RECAPTCHA_SITE_KEY}
+          sitekey={sitekey}
           onChange={handleInputChange}
           ref={captchaRef}
         />
