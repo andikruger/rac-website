@@ -18,23 +18,25 @@ const contactForm = () => {
     const token = captchaRef.current.getValue();
     captchaRef.current.reset();
     console.log(token);
+    const data = {
+      ...formData,
+      token,
+    };
 
-    // axios.post (https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${token})
-
-    // axios
-    //   .post("/api/contact", formData)
-    //   .then((res) => {
-    //     toast.success(res.data.message);
-    //     setFormData({
-    //       name: "",
-    //       email: "",
-    //       subject: "",
-    //       message: "",
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     toast.error(err.response.data.message);
-    //   });
+    axios
+      .post("/api/contact", data)
+      .then((res) => {
+        toast.success(res.data.message);
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((err) => {
+        toast.error(err.response.data.message);
+      });
   };
 
   const handleInputChange = (e) => {

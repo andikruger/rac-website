@@ -9,3 +9,4 @@ sanity/config/@sanity/google-maps-input.json
 client/.env
 .env
 */.env
+client/.env copy
