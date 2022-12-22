@@ -18,6 +18,8 @@ const contactForm = () => {
     captchaRef.current.reset();
     console.log(token);
 
+    // axios.post (https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${token})
+
     // axios
     //   .post("/api/contact", formData)
     //   .then((res) => {
@@ -78,7 +80,7 @@ const contactForm = () => {
           onChange={handleInputChange}
         ></textarea>
         <ReCAPTCHA
-          sitekey="6LeOR50jAAAAAGAmy9eom-nNuNxP2VqBJi7347rx"
+          sitekey={process.env.RECAPTCHA_SITE_KEY}
           onChange={handleInputChange}
           ref={captchaRef}
         />
