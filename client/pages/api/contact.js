@@ -6,7 +6,7 @@ export default async (req, res) => {
 
   await axios
     .post(
-      `https://www.google.com/recaptcha/api/siteverify?secret=6LeOR50jAAAAAL5pZh21X6W5EJj2TyC6t1LKqAEQ&response=${token}`
+      `https://www.google.com/recaptcha/api/siteverify?secret=6LdrzZ0jAAAAAEhgrolree0AblHcEtw6Uh88y1sf&response=${token}`
     )
     .then((response) => {
       console.log(response.data);
