@@ -1,14 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ForgotPassword = () => {
+  const sitekey = "6LeKEp8jAAAAAHdjyJIqRNNBEXIVljZKaLvaivpF";
+  const captchaRef = useRef(null);
   const [form_data, setForm_data] = useState({
     email: "",
   });
+
+  const sendForgotPassword = () => {
+    try {
+      axios
+        .post("/api/users/forgotpassword", form_data)
+        .then((res) => {
+          if (res.data.success) {
+            toast.success(res.data.message);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          const errors = err.response.data.message;
+          console.log(errors);
+          // error is in the form of {type: "message"} use toasts to display
+          toast.error(errors);
+        });
+    } catch (err) {
+      console.log("in catch");
+      console.log(err);
+    }
+  };
   function requiredFields() {
     if (form_data.email === "") {
       return false;
@@ -25,25 +50,26 @@ const ForgotPassword = () => {
     e.preventDefault();
     console.log(form_data);
     if (requiredFields()) {
-      try {
-        axios
-          .post("/api/users/forgotpassword", form_data)
-          .then((res) => {
-            if (res.data.success) {
-              toast.success(res.data.message);
-            }
-          })
-          .catch((err) => {
-            console.log(err);
-            const errors = err.response.data.message;
-            console.log(errors);
-            // error is in the form of {type: "message"} use toasts to display
-            toast.error(errors);
-          });
-      } catch (err) {
-        console.log("in catch");
-        console.log(err);
-      }
+      const token = captchaRef.current.getValue();
+      captchaRef.current.reset();
+
+      const data = {
+        ...form_data,
+        token,
+      };
+
+      axios
+        .post("/api/verifyCaptcha", data)
+        .then((res) => {
+          if (res.data.success) {
+            sendForgotPassword();
+          } else {
+            toast.error("Invalid captcha");
+          }
+        })
+        .catch((err) => {
+          toast.error(err.response.data.message);
+        });
     } else {
       toast.error("Please fill in all fields");
       setForm_data({
@@ -146,7 +172,9 @@ const ForgotPassword = () => {
                   Your Email
                 </label>
               </div>
-
+              <div className="flex justify-center">
+                <ReCAPTCHA size="normal" sitekey={sitekey} ref={captchaRef} />
+              </div>
               <div className="flex items-center justify-between">
                 <button
                   type="submit"

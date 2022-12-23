@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { toast } from "react-toastify";
@@ -6,8 +6,31 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useRouter } from "next/router";
 import jsCookie from "js-cookie";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Register = () => {
+  const sitekey = "6LeKEp8jAAAAAHdjyJIqRNNBEXIVljZKaLvaivpF";
+  const captchaRef = useRef(null);
+  const sendRegister = () => {
+    try {
+      axios
+        .post("/api/users/register", form_data)
+        .then((res) => {
+          if (res.data.success) {
+            toast.success(res.data.message);
+          }
+        })
+        .catch((err) => {
+          const errors = err.response.data.message;
+          console.log(errors);
+          // error is in the form of {type: "message"} use toasts to display
+          toast.error(errors);
+        });
+    } catch (err) {
+      console.log("in catch");
+      console.log(err);
+    }
+  };
   const [form_data, setForm_data] = useState({
     name: "",
     email: "",
@@ -29,24 +52,26 @@ const Register = () => {
   function handleSubmit(e) {
     e.preventDefault();
     if (confirmPassword()) {
-      try {
-        axios
-          .post("/api/users/register", form_data)
-          .then((res) => {
-            if (res.data.success) {
-              toast.success(res.data.message);
-            }
-          })
-          .catch((err) => {
-            const errors = err.response.data.message;
-            console.log(errors);
-            // error is in the form of {type: "message"} use toasts to display
-            toast.error(errors);
-          });
-      } catch (err) {
-        console.log("in catch");
-        console.log(err);
-      }
+      const token = captchaRef.current.getValue();
+      captchaRef.current.reset();
+
+      const data = {
+        ...form_data,
+        token,
+      };
+
+      axios
+        .post("/api/verifyCaptcha", data)
+        .then((res) => {
+          if (res.data.success) {
+            sendRegister();
+          } else {
+            toast.error("Invalid captcha");
+          }
+        })
+        .catch((err) => {
+          toast.error(err.response.data.message);
+        });
     } else {
       toast.error("Passwords do not match");
       setForm_data({
@@ -200,6 +225,9 @@ const Register = () => {
                 >
                   Confirm Password
                 </label>
+              </div>
+              <div className="flex justify-center">
+                <ReCAPTCHA size="normal" sitekey={sitekey} ref={captchaRef} />
               </div>
               <div className="flex items-center justify-between">
                 <button
