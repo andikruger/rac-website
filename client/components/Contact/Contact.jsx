@@ -82,7 +82,10 @@ const contactForm = () => {
           name="message"
           onChange={handleInputChange}
         ></textarea>
-        <ReCAPTCHA size="normal" sitekey={sitekey} ref={captchaRef} />
+        {/* center recaptcha */}
+        <div className="flex justify-center">
+          <ReCAPTCHA size="normal" sitekey={sitekey} ref={captchaRef} />
+        </div>
 
         <button className="bg-[#67162c] text-white hover:bg-[#470819] border shadow-lg p-3 w-full mt-2">
           Submit
