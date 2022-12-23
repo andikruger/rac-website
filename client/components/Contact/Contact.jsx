@@ -5,6 +5,33 @@ import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const contactForm = () => {
+  // create a function that sends the form data to the server
+  const sendEmail = () => {
+    // send a post request to the server to /api/contact
+    axios
+      .post("/api/contact", formData)
+      .then((res) => {
+        // if the response is successful, show a success message
+        if (res.data.success) {
+          toast.success(res.data.message);
+          // reset the form
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        } else {
+          // if the response is not successful, show an error message
+          toast.error("Something went wrong, please use the above email");
+        }
+      })
+      .catch((err) => {
+        // if there is an error, show an error message
+        toast.error(err.response.data.message);
+      });
+  };
+
   const sitekey = "6LeKEp8jAAAAAHdjyJIqRNNBEXIVljZKaLvaivpF";
   const captchaRef = useRef(null);
   const [formData, setFormData] = useState({
@@ -14,6 +41,7 @@ const contactForm = () => {
     message: "",
   });
   const handleSubmit = (e) => {
+    let isHuman = false;
     e.preventDefault();
     const token = captchaRef.current.getValue();
     captchaRef.current.reset();
@@ -24,15 +52,13 @@ const contactForm = () => {
     };
 
     axios
-      .post("/api/contact", data)
+      .post("/api/verifyCaptcha", data)
       .then((res) => {
-        toast.success(res.data.message);
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+        if (res.data.success) {
+          sendEmail();
+        } else {
+          toast.error("Invalid captcha");
+        }
       })
       .catch((err) => {
         toast.error(err.response.data.message);
