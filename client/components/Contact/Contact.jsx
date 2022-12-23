@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const contactForm = () => {
-  const sitekey = "6LdrzZ0jAAAAAFiDSw_S77Vjqmi636ZjD0HOtf-A";
+  const sitekey = "6LeKEp8jAAAAAHdjyJIqRNNBEXIVljZKaLvaivpF";
   const captchaRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -82,11 +82,7 @@ const contactForm = () => {
           name="message"
           onChange={handleInputChange}
         ></textarea>
-        <ReCAPTCHA
-          sitekey={sitekey}
-          onChange={handleInputChange}
-          ref={captchaRef}
-        />
+        <ReCAPTCHA size="normal" sitekey={sitekey} ref={captchaRef} />
 
         <button className="bg-[#67162c] text-white hover:bg-[#470819] border shadow-lg p-3 w-full mt-2">
           Submit
