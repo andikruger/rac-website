@@ -9,6 +9,21 @@ export default {
       type: "string",
       description: "The name of the Club Run",
     },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      description: "The slug of the Club Run",
+      options: {
+        source: "name",
+        maxLength: 96,
+      },
+    },
+    {
+      name: "date",
+      title: "Date",
+      type: "date",
+    },
 
     {
       name: "time",
@@ -23,6 +38,13 @@ export default {
       type: "array",
       of: [{ type: "string" }],
       description: "The distance of the Club Run",
+    },
+    {
+      name: "map",
+      title: "Map",
+      type: "string",
+      description:
+        "The id of the plotaroute map eg. 1848450 from https://www.plotaroute.com/route/1848450",
     },
   ],
 };

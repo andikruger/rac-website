@@ -2,7 +2,7 @@ const sendEmail = require("../../utils/sendEmail");
 
 export default async (req, res) => {
   const { name, email, subject, message } = req.body;
-  console.log(req.body);
+
   const emailMessage = `
     <h2>You have a new message from ${name}</h2>
     <p>Email: ${email}</p>

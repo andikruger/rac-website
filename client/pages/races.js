@@ -9,8 +9,6 @@ const Races = () => {
   const [data, setData] = useState([]);
   const [isDataSet, setIsDataSet] = useState(false);
   const [clubruns, setClubruns] = useState([]);
-  const [combined, setCombined] = useState([]);
-  const [isCombined, setIsCombined] = useState(false);
 
   const fetchData = async () => {
     const response = await fetch(
@@ -62,7 +60,7 @@ const Races = () => {
         IsAllDay: false,
         CategoryColor: "#246635",
         Location: item.name,
-        Description: `You can get more information on the <a class="hover rac-colour text-bold" href="/race/" target="_blank">Race Page</a>`,
+        Description: `You can view the map on the <a class="hover rac-colour text-bold" href="/clubactivities/clubruns/${item.slug.current}" target="_blank">Clubrun Page</a>`,
       };
     });
 
@@ -73,25 +71,12 @@ const Races = () => {
     if (!isDataSet) {
       fetchData();
       fetchClubRuns();
-
-      // add the clubruns to the data
-      setCombined([...data, ...clubruns]);
-
       setIsDataSet(true);
     }
-
-    // push the clubrun items to the data array
-    let temp = [];
-    data.forEach((item) => {
-      temp.push(item);
-    });
-    clubruns.forEach((item) => {
-      temp.push(item);
-    });
-
-    setCombined(temp);
-    setIsCombined(true);
   }, []);
+
+  let temp = [...data, ...clubruns];
+
   return (
     <>
       <Head>
@@ -176,7 +161,7 @@ const Races = () => {
       </Head>
       <HeroSmall heading="Races through the year" message="" image={heroImg} />
       <div className="flex flex-col items-center justify-center p-4">
-        {<Calendar data={data} />}
+        {<Calendar data={temp} />}
       </div>
     </>
   );

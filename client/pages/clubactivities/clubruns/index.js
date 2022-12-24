@@ -1,16 +1,15 @@
 import Head from "next/head";
-import HeroSmall from "../../components/Hero/HeroSmall";
+import HeroSmall from "../../../components/Hero/HeroSmall";
 import Image from "next/image";
-import timetrial5km from "../../assets/timetrial5km.jpg";
-import timetrial8km from "../../assets/timetrial8km.jpg";
-import heroImg from "../../assets/memberphoto.jpg";
+
+import heroImg from "../../../assets/memberphoto.jpg";
 
 const About = () => {
   const year = new Date().getFullYear();
   return (
     <>
       <Head>
-        <title>About Us | Club Runs</title>
+        <title>clubruns | Rand Athletic Club</title>
         <meta
           name="description"
           content="Created as template for future work"
