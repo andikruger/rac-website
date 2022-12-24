@@ -34,6 +34,21 @@ const Calendar = (data) => {
   return (
     <div className="shadow-xl animate Card max-w-[1240px] mx-auto text-center py-4 bg-white rounded-lg">
       <p className="text-2xl font-bold">What's coming up 🗓️</p>
+
+      {/* add a ledgend */}
+      <div className="flex flex-row justify-center">
+        <p className="text-xl font-bold m-2">
+          Races in{" "}
+          <span className="rac-colour"> RAC Maroon are official Races</span>
+        </p>
+      </div>
+      <div className="flex flex-row justify-center">
+        <p className="text-xl font-bold m-2">
+          Races in{" "}
+          <span className="text-[#246635]"> Green are RAC club runs</span>
+        </p>
+      </div>
+
       <div className="m-2 md:m-10 mt-32 p-2 md:p-10 bg-white rounded-3xl">
         <ScheduleComponent
           height="650px"
