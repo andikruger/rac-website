@@ -11,7 +11,7 @@ export default async (req, res) => {
     `;
   try {
     await sendEmail({
-      to: "andreas@kruger.joburg",
+      to: "randathletic@iafrica.com",
       subject: subject,
       text: emailMessage,
     });
