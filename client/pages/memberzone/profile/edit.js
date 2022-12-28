@@ -132,12 +132,14 @@ const Profile = ({ heading, message }) => {
           className="flex items-center justify-center  h-screen mb-12 bg-fixed bg-center bg-cover"
         >
           {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 " /> */}
-          <div className="p-5 text-white  z-[2] mt-[-10rem]">
+          <div className="p-5 text-white  z-[2] mt-[-10rem] ">
             {/* glassmorphism card start */}
             {/* create a profile card with avatar in glassmorphism */}
-            <div className="Card flex flex-col pt-4 items-center pt-6 w-96 h-120 bg-white rounded-3xl shadow-2xl glass-nav">
+            <div className="Card m-4 flex flex-col pt-4 items-center pt-24 w-96 h-120 bg-white rounded-3xl shadow-2xl glass-nav">
               {/* add personal information */}
-
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                Edit Profile
+              </h2>
               <form
                 className="rounded pt-6 p-4 pb-8 mb-4 w-full max-w-sm"
                 onSubmit={handleSubmit}
@@ -184,6 +186,7 @@ const Profile = ({ heading, message }) => {
                     placeholder=" "
                     name="email"
                     value={form_data.email}
+                    readOnly={true}
                     onChange={handleChange}
                   />
                   <label
