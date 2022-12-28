@@ -55,6 +55,7 @@ const contactForm = () => {
       .post("/api/verifyCaptcha", data)
       .then((res) => {
         if (res.data.success) {
+          console.log(res.data);
           sendEmail();
         } else {
           toast.error("Invalid captcha");
