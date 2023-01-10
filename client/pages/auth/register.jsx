@@ -18,6 +18,9 @@ const Register = () => {
         .then((res) => {
           if (res.data.success) {
             toast.success(res.data.message);
+            toast.info(
+              "Please allow up to a minute until your account has been activated"
+            );
           }
         })
         .catch((err) => {
