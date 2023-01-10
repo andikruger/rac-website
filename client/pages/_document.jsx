@@ -36,6 +36,7 @@ export default function Document() {
           async
           src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js"
         />
+        <script async src="./pwabuilder-sw-register.js" />
       </Head>
       <body>
         <Main />
