@@ -51,19 +51,20 @@ const contactForm = () => {
       token,
     };
 
-    axios
-      .post("/api/verifyCaptcha", data)
-      .then((res) => {
-        if (res.data.success) {
-          console.log(res.data);
-          sendEmail();
-        } else {
-          toast.error("Invalid captcha");
-        }
-      })
-      .catch((err) => {
-        toast.error(err.response.data.message);
-      });
+    // axios
+    //   .post("/api/verifyCaptcha", data)
+    //   .then((res) => {
+    //     if (res.data.success) {
+    //       console.log(res.data);
+    //       sendEmail();
+    //     } else {
+    //       toast.error("Invalid captcha");
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     toast.error(err.response.data.message);
+    //   });
+    sendEmail();
   };
 
   const handleInputChange = (e) => {
