@@ -131,7 +131,7 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-      {/* <ContactForm /> */}
+      <ContactForm />
     </>
   );
 };
