@@ -11,6 +11,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
   function requiredFields() {
     if (form_data.email === "" || form_data.password === "") {
       return false;
@@ -25,7 +26,7 @@ const Login = () => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(form_data);
+    setIsLoading(true);
     if (requiredFields()) {
       try {
         axios
@@ -39,16 +40,17 @@ const Login = () => {
 
               localStorage.setItem("token", res.data.token);
               localStorage.setItem("name", res.data.name);
+              setIsLoading(false);
             }
           })
           .catch((err) => {
             const errors = err.response.data.message;
-            // error is in the form of {type: "message"} use toasts to display
             toast.error(errors);
+            setIsLoading(false);
           });
       } catch (err) {
-        console.log("in catch");
         console.log(err);
+        setIsLoading(false);
       }
     } else {
       toast.error("Please fill in all fields");
@@ -57,6 +59,7 @@ const Login = () => {
         password: "",
         confirmPassword: "",
       });
+      setIsLoading(false);
     }
   }
 
@@ -175,7 +178,11 @@ const Login = () => {
                   type="submit"
                   className="w-full mt-4 py-2 px-4 rounded-lg text-white bg-[#67162c] hover:bg-[#67162c] focus:outline-none focus:ring-2 focus:ring-[#67162c] focus:ring-opacity-50"
                 >
-                  Login
+                  {isLoading ? (
+                    <p className="text-white">Loading...</p>
+                  ) : (
+                    <p className="text-white">Login</p>
+                  )}
                 </button>
               </div>
             </form>

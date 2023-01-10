@@ -22,6 +22,7 @@ const Register = () => {
             toast.info(
               "Please allow up to a minute until your account has been activated"
             );
+            setIsLoading(false);
           }
         })
         .catch((err) => {

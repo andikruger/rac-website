@@ -8,6 +8,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const ForgotPassword = () => {
   const sitekey = "6LeKEp8jAAAAAHdjyJIqRNNBEXIVljZKaLvaivpF";
+  const [isLoading, setIsLoading] = useState(false);
   const captchaRef = useRef(null);
   const [form_data, setForm_data] = useState({
     email: "",
@@ -20,6 +21,7 @@ const ForgotPassword = () => {
         .then((res) => {
           if (res.data.success) {
             toast.success(res.data.message);
+            setIsLoading(false);
           }
         })
         .catch((err) => {
@@ -30,7 +32,6 @@ const ForgotPassword = () => {
           toast.error(errors);
         });
     } catch (err) {
-      console.log("in catch");
       console.log(err);
     }
   };
@@ -48,7 +49,7 @@ const ForgotPassword = () => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(form_data);
+    setIsLoading(true);
     if (requiredFields()) {
       const token = captchaRef.current.getValue();
       captchaRef.current.reset();
@@ -65,10 +66,12 @@ const ForgotPassword = () => {
             sendForgotPassword();
           } else {
             toast.error("Invalid captcha");
+            setIsLoading(false);
           }
         })
         .catch((err) => {
           toast.error(err.response.data.message);
+          setIsLoading(false);
         });
     } else {
       toast.error("Please fill in all fields");
@@ -77,6 +80,7 @@ const ForgotPassword = () => {
         password: "",
         confirmPassword: "",
       });
+      setIsLoading(false);
     }
   }
 
@@ -180,7 +184,11 @@ const ForgotPassword = () => {
                   type="submit"
                   className="w-full mt-4 py-2 px-4 rounded-lg text-white bg-[#67162c] hover:bg-[#67162c] focus:outline-none focus:ring-2 focus:ring-[#67162c] focus:ring-opacity-50"
                 >
-                  Login
+                  {isLoading ? (
+                    <p className="text-white">Loading...</p>
+                  ) : (
+                    <p className="text-white">Forgot Password</p>
+                  )}
                 </button>
               </div>
             </form>

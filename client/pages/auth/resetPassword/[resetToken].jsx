@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const ResetPassword = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const { resetToken } = router.query;
 
@@ -28,7 +29,7 @@ const ResetPassword = () => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(form_data);
+    setIsLoading(true);
     if (confirmPassword()) {
       try {
         axios
@@ -36,16 +37,18 @@ const ResetPassword = () => {
           .then((res) => {
             if (res.data.success) {
               toast.success(res.data.message);
+              setIsLoading(false);
             }
           })
           .catch((err) => {
             const errors = err.response.data.message;
             console.log(errors);
+            setIsLoading(false);
             // error is in the form of {type: "message"} use toasts to display
             toast.error(errors);
           });
       } catch (err) {
-        console.log("in catch");
+        setIsLoading(false);
         console.log(err);
       }
     } else {
@@ -172,7 +175,11 @@ const ResetPassword = () => {
                   type="submit"
                   className="w-full mt-4 py-2 px-4 rounded-lg text-white bg-[#67162c] hover:bg-[#67162c] focus:outline-none focus:ring-2 focus:ring-[#67162c] focus:ring-opacity-50"
                 >
-                  Reset Password
+                  {isLoading ? (
+                    <p className="text-white">Loading...</p>
+                  ) : (
+                    <p className="text-white">Reset Password</p>
+                  )}
                 </button>
               </div>
             </form>
