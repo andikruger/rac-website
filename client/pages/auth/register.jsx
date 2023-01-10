@@ -11,6 +11,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 const Register = () => {
   const sitekey = "6LeKEp8jAAAAAHdjyJIqRNNBEXIVljZKaLvaivpF";
   const captchaRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
   const sendRegister = () => {
     try {
       axios
@@ -55,6 +56,7 @@ const Register = () => {
   function handleSubmit(e) {
     e.preventDefault();
     if (confirmPassword()) {
+      setIsLoading(true);
       const token = captchaRef.current.getValue();
       captchaRef.current.reset();
 
@@ -70,10 +72,12 @@ const Register = () => {
             sendRegister();
           } else {
             toast.error("Invalid captcha");
+            setIsLoading(false);
           }
         })
         .catch((err) => {
           toast.error(err.response.data.message);
+          setIsLoading(false);
         });
     } else {
       toast.error("Passwords do not match");
@@ -237,7 +241,11 @@ const Register = () => {
                   type="submit"
                   className="w-full mt-4 py-2 px-4 rounded-lg text-white bg-[#67162c] hover:bg-[#67162c] focus:outline-none focus:ring-2 focus:ring-[#67162c] focus:ring-opacity-50"
                 >
-                  Register
+                  {isLoading ? (
+                    <p className="text-white">Loading...</p>
+                  ) : (
+                    <p className="text-white">Register</p>
+                  )}
                 </button>
               </div>
             </form>
