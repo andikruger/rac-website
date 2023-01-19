@@ -23,11 +23,13 @@ const Classifieds = () => {
       sessionStorage.removeItem("login");
     }
     if (!data) {
-      const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D`;
+      const url = `https://yavqngwf.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22advert%22%5D&%24_id=%22Fo7TLoYbOVRqBv3J6FpE92%22`;
       axios.get(url).then((res) => {
+        console.log(res.data.result);
         // reverse res.data.result to show latest first
-        let reversed = res.data.result.reverse();
-        setData(reversed);
+        //let reversed = res.data.result.reverse();
+        //setData(reversed);
+        setData(res.data.result);
       });
     }
   }, [data]);
