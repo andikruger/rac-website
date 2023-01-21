@@ -26,6 +26,8 @@ const Article = ({ data }) => {
     article: true,
   };
 
+  console.log(shareImage);
+
   const serializers = {
     normal: (props) => (
       <p className="text-lg p-4" {...props}>
@@ -69,6 +71,9 @@ const Article = ({ data }) => {
         className="w-full md:w-3/4 p-4 m-4"
         src={urlFor(props.asset._ref).width(3000).url()}
       />
+    ),
+    em: (props) => (
+      <em className="text-lg text-gray-500 text-center  ">{props.children}</em>
     ),
 
     mainImage: (props) => (

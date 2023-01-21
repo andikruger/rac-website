@@ -27,9 +27,8 @@ const Classifieds = () => {
       axios.get(url).then((res) => {
         console.log(res.data.result);
         // reverse res.data.result to show latest first
-        //let reversed = res.data.result.reverse();
-        //setData(reversed);
-        setData(res.data.result);
+        let reversed = res.data.result.reverse();
+        setData(reversed);
       });
     }
   }, [data]);

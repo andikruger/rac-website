@@ -55,6 +55,16 @@ const Article = () => {
     h6: (props) => (
       <h6 className="text-lg font-bold text-center p-4 m-4 py-0" {...props} />
     ),
+    span: (props) => (
+      <span className="text-lg p-4" {...props}>
+        {props.children}
+      </span>
+    ),
+    em: (props) => (
+      <em className="text-lg p-4" {...props}>
+        {props.children}
+      </em>
+    ),
     blockquote: (props) => (
       <blockquote
         className="text-lg text-gray-500 font-bold text-center p-4 py-0"
