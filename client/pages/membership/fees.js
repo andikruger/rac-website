@@ -105,7 +105,7 @@ const Fees = () => {
         </h1>
 
         {/* create a full width card with lorem ipsum*/}
-        <div className="flex flex-row rounded-lg shadow-lg m-4 bg-white">
+        {/* <div className="flex flex-row rounded-lg shadow-lg m-4 bg-white">
           <div className="w-full">
             <h2 className="text-3xl font-bold rac-colour text-center text-bold text-strong m-4">
               Early Bird Discount
@@ -115,7 +115,7 @@ const Fees = () => {
               500 plus R 140 license fee
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col md:flex-row justify-center items-center">
           {/* column one */}

@@ -52,8 +52,7 @@ const LatestNews = () => {
           />
           <h1 className="font-bold text-xl p-4">2023 Subscriptions</h1>
           <p className="text-gray-500 p-4">
-            Don't forget to renew your subscription for 2023. Pay during
-            December and January and get a discount.
+            Information regarding the membership fees can be found here
           </p>
           <Link legacyBehavior href="membership/fees">
             <a className="bg-[#67162c] hover text-white font-bold py-2 px-4 rounded">
