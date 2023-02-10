@@ -19,7 +19,7 @@ const Fees = () => {
   return (
     <>
       <Head>
-        <title>Fees | Rand Athletic Club</title>
+        <title>Membership | Rand Athletic Club</title>
         <meta
           name="description"
           content="Created as template for future work"
