@@ -186,3 +186,21 @@ img:hover {
     background-image: url("https://cdn.sanity.io/images/yavqngwf/production/0da4e8c76f625ad78280a2283caf4a4f9582d33b-5472x3648.jpg?fp-x=0.5&fp-y=0.5&w=5000&fit=max&auto=format") !important;
   }
 }
+
+.radio-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #67162c;
+  color: white;
+}
