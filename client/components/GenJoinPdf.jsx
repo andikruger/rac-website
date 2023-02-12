@@ -1,5 +1,7 @@
 import React from "react";
 import jsPDF from "jspdf";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class GenFMEAPdf extends React.Component {
   constructor(props) {
@@ -9,9 +11,47 @@ class GenFMEAPdf extends React.Component {
 
   genPdf = () => {
     const formData = this.props.data;
-    // if formData.workpgone is empty, then add "N/A" to it
-    if (formData.workphone === "") {
-      formData.workphone = "N/A";
+    // if formdata.surname is empty, then display an error toast
+    if (!formData.surname) {
+      toast.error("Surname is required");
+      return;
+    }
+
+    if (!formData.firstname) {
+      toast.error("First Name is required");
+      return;
+    }
+
+    if (!formData.dob) {
+      toast.error("Date of Birth is required");
+      return;
+    }
+
+    if (!formData.cellphone) {
+      toast.error("Cellphone Number is required");
+      return;
+    }
+
+    if (!formData.email) {
+      toast.error("Email Address is required");
+      return;
+    }
+
+    if (!formData.postaladdresslineone) {
+      toast.error("Address is required");
+      return;
+    }
+
+    if (!formData.prevclubradio) {
+      toast.error(
+        "Please indicate if you are currently a member of a Athletic club"
+      );
+      return;
+    }
+
+    if (!formData.clubresigned) {
+      toast.error("Please indicate if you resigned from your previous club");
+      return;
     }
 
     var imgData =
@@ -19,7 +59,7 @@ class GenFMEAPdf extends React.Component {
     var doc = new jsPDF();
 
     doc.setFontSize(30);
-    doc.text(50, 25, "Rand Athletic Club");
+    doc.text(60, 25, "Rand Athletic Club");
     doc.addImage(imgData, "JPEG", 45, 40, 120, 40);
     doc.setFontSize(20);
     doc.setFont("helvetica", "bold");
@@ -37,48 +77,48 @@ class GenFMEAPdf extends React.Component {
     doc.setFont("helvetica", "bold");
     doc.text("Work Phone:", 10, 140, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("0117873410", 55, 140, null, null);
+    doc.text(formData.workphone || "N/A", 55, 140, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Home Phone:", 10, 155, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("0117873410", 57, 155, null, null);
+    doc.text(formData.homephone || "N/A", 57, 155, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Cellphone:", 10, 170, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("0714998826", 48, 170, null, null);
+    doc.text(formData.cellphone, 48, 170, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Email Address:", 10, 185, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("andreas_kruger@hotmail.com", 63, 185, null, null);
+    doc.text(formData.email, 63, 185, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Address Line 1:", 10, 200, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("193 Oak Avenue", 64, 200, null, null);
+    doc.text(formData.postaladdresslineone, 64, 200, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Address Line 2:", 10, 215, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("Ferndale", 64, 215, null, null);
+    doc.text(formData.postaladdresslinetwo || "N/A", 64, 215, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Address Line 3:", 10, 230, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("Randburg", 64, 230, null, null);
+    doc.text(formData.postaladdresslinethree || "N/A", 64, 230, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Address Line 4:", 10, 245, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("Address Line 4", 64, 245, null, null);
+    doc.text(formData.postaladdresslinefour || "N/A", 64, 245, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Postal Code:", 10, 260, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("2194", 55, 260, null, null);
+    doc.text(formData.postalcode || "N/A", 55, 260, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Occupation:", 10, 275, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("Student", 53, 275, null, null);
+    doc.text(formData.occupation || "N/A", 53, 275, null, null);
     doc.addPage();
     doc.setFont("helvetica", "bold");
     doc.text("Prov Licence:", 10, 35, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("575", 59, 35, null, null);
+    doc.text(formData.provlicence || "N/A", 59, 35, null, null);
     doc.setFont("helvetica", "bold");
     doc.text(
       "Do you belong to an Athletic Club at present:",
@@ -88,16 +128,16 @@ class GenFMEAPdf extends React.Component {
       null
     );
     doc.setFont("helvetica", "normal");
-    doc.text("NO", 163, 50, null, null);
+    doc.text(formData.prevclubradio, 163, 50, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("If yes, which one:", 10, 65, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("Kayway Jelly", 70, 65, null, null);
+    doc.text(formData.prevclub || "N/A", 70, 65, null, null);
     doc.setFont("helvetica", "bold");
     doc.text("Have you resigned from your old Club:", 10, 80, null, null);
     doc.setFont("helvetica", "normal");
-    doc.text("N/A", 142, 80, null, null);
-    doc.setFont("Arial", "bold");
+    doc.text(formData.clubresigned, 142, 80, null, null);
+    doc.setFont("helvetica", "bold");
     doc.text("Signed", 10, 110, null, null);
     doc.line(120, 110, 40, 110);
 
@@ -111,7 +151,7 @@ class GenFMEAPdf extends React.Component {
     doc.line(120, 200, 45, 200);
     doc.addPage();
     doc.text("Please note the fllowing:", 10, 35);
-    doc.setFont("Arial", "normal");
+    doc.setFont("helvetica", "normal");
     doc.setFontSize(18);
 
     doc.text("1. The Annual subscription is a non-refundable, one off", 10, 50);
@@ -197,8 +237,7 @@ class GenFMEAPdf extends React.Component {
         <button
           onClick={this.genPdf}
           type="primary"
-          className="w-full py-3 mt-10 bg-gray-800 font-medium text-white uppercase rounded-lg shadow-md lg:shadow-lg 
-                    focus:outline-none hover:bg-gray-700 hover:shadow-none"
+          className="w-full mt-4 py-2 px-4 rounded-lg text-white bg-[#67162c] hover:bg-[#67162c] focus:outline-none focus:ring-2 focus:ring-[#67162c] focus:ring-opacity-50"
         >
           Generate PDF
         </button>

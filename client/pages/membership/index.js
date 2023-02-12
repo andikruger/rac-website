@@ -175,13 +175,28 @@ const Fees = () => {
                   </a>
                 </Link>
               </div>
-
               <div className="flex flex-row justify-center pb-4 items-center">
                 {/* create a div that adds a space between each element */}
 
                 <Link legacyBehavior href="/documents/ASA_Licence_Form.pdf">
                   <a className="pr-4 bg-[#67162c] hover text-white font-bold py-2 px-4 rounded">
                     ASA/CGA License Application Form
+                  </a>
+                </Link>
+              </div>
+              <p className="text-lg text-center  text-strong m-4">
+                Alternatively, you can fill out the{" "}
+                <span className="font-bold rac-colour">
+                  RAC membership form
+                </span>{" "}
+                online and print it out.
+              </p>
+
+              <div className="flex flex-row justify-center pb-4 items-center">
+                {/* create a div that adds a space between each element */}
+                <Link legacyBehavior href="membership/join">
+                  <a className="bg-[#67162c] hover text-white font-bold py-2 px-4 rounded">
+                    Online RAC Membership Form
                   </a>
                 </Link>
               </div>

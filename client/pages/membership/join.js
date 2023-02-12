@@ -4,7 +4,8 @@ import Link from "next/link";
 import HeroSmall from "../../components/Hero/HeroSmall";
 import GenJoinPdf from "../../components/GenJoinPdf";
 import heroImg from "../../assets/toughone22.jpg";
-import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Join = () => {
   const [data, setData] = useState([
@@ -14,10 +15,9 @@ const Join = () => {
       dob: "",
     },
   ]);
-  const [club, setClub] = useState([]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form submitted");
   };
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -118,6 +118,13 @@ const Join = () => {
               <p className="text-lg text-center  text-strong m-4">
                 Fill out the form below to generate a membership form. You can
                 then print the form and send it to the club with your payment.
+              </p>
+              {/* Add a note */}
+              <p className="text-lg text-center  text-strong m-4">
+                <span className="font-bold">Note:</span> The Data you submit on
+                this form will <span className="font-bold">not</span> be sent to
+                a server and therefore <span className="font-bold">not</span> be
+                stored.
               </p>
               {/* create an application form */}
               <form
@@ -360,7 +367,7 @@ const Join = () => {
                     type="radio"
                     id="yes"
                     name="prevclubradio"
-                    value="yes"
+                    value="Yes"
                     onChange={handleChange}
                   />
                   <label className="radio-label" htmlFor="yes">
@@ -371,7 +378,7 @@ const Join = () => {
                     type="radio"
                     id="no"
                     name="prevclubradio"
-                    value="no"
+                    value="No"
                     onChange={handleChange}
                   />
                   <label className="radio-label" htmlFor="no">
@@ -382,7 +389,7 @@ const Join = () => {
                     type="radio"
                     id="na"
                     name="prevclubradio"
-                    value="na"
+                    value="N/A"
                     onChange={handleChange}
                   />
                   <label className="radio-label" htmlFor="na">
@@ -415,7 +422,7 @@ const Join = () => {
                     type="radio"
                     id="yesresigned"
                     name="clubresigned"
-                    value="yes"
+                    value="Yes"
                     onChange={handleChange}
                   />
                   <label className="radio-label" htmlFor="yesresigned">
@@ -426,7 +433,7 @@ const Join = () => {
                     type="radio"
                     id="noresigned"
                     name="clubresigned"
-                    value="noresigned"
+                    value="No"
                     onChange={handleChange}
                   />
                   <label className="radio-label" htmlFor="noresigned">
@@ -437,7 +444,7 @@ const Join = () => {
                     type="radio"
                     id="naresigned"
                     name="clubresigned"
-                    value="na"
+                    value="N/A"
                     onChange={handleChange}
                   />
                   <label className="radio-label" htmlFor="naresigned">
