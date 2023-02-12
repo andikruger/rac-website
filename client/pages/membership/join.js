@@ -2,11 +2,23 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import HeroSmall from "../../components/Hero/HeroSmall";
+import GenJoinPdf from "../../components/GenJoinPdf";
 import heroImg from "../../assets/toughone22.jpg";
 import axios from "axios";
 
-const Fees = () => {
-  const [data, setData] = useState([]);
+const Join = () => {
+  const [data, setData] = useState([
+    {
+      surname: "",
+      firstname: "",
+      dob: "",
+    },
+  ]);
+  const [club, setClub] = useState([]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form submitted");
+  };
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
     console.log(data);
@@ -14,7 +26,7 @@ const Fees = () => {
   return (
     <>
       <Head>
-        <title>Fees | Rand Athletic Club</title>
+        <title>Join | Rand Athletic Club</title>
         <meta
           name="description"
           content="Created as template for future work"
@@ -108,7 +120,10 @@ const Fees = () => {
                 then print the form and send it to the club with your payment.
               </p>
               {/* create an application form */}
-              <form className="flex flex-col justify-center items-center m-4">
+              <form
+                className="flex flex-col justify-center items-center m-4"
+                onSubmit={handleSubmit}
+              >
                 <div className="pb-2 w-3/4 relative">
                   <input
                     type="text"
@@ -333,6 +348,103 @@ const Fees = () => {
                     Your Provisional Licence Number
                   </label>
                 </div>
+
+                <div className="pb-2 w-3/4 relative">
+                  <label className="text-sm text-gray-500 dark:text-gray-400">
+                    Do you belong to an Athletic Club at present?
+                  </label>
+                </div>
+
+                <div className="pb-4">
+                  <input
+                    type="radio"
+                    id="yes"
+                    name="prevclubradio"
+                    value="yes"
+                    onChange={handleChange}
+                  />
+                  <label className="radio-label" htmlFor="yes">
+                    Yes
+                  </label>
+
+                  <input
+                    type="radio"
+                    id="no"
+                    name="prevclubradio"
+                    value="no"
+                    onChange={handleChange}
+                  />
+                  <label className="radio-label" htmlFor="no">
+                    No
+                  </label>
+
+                  <input
+                    type="radio"
+                    id="na"
+                    name="prevclubradio"
+                    value="na"
+                    onChange={handleChange}
+                  />
+                  <label className="radio-label" htmlFor="na">
+                    Not Applicable
+                  </label>
+                </div>
+                <div className="pb-2 w-3/4 relative">
+                  <input
+                    type="text"
+                    id="prevclub"
+                    className="block rounded-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#67162c] peer"
+                    placeholder=" "
+                    name="prevclub"
+                    onChange={handleChange}
+                  />
+                  <label
+                    htmlFor="prevclub"
+                    className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-[#67162c] peer-focus:dark:text-[#67162c] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+                  >
+                    Your Previous Club
+                  </label>
+                </div>
+                <div className="pb-2 w-3/4 relative">
+                  <label className="text-sm text-gray-500 dark:text-gray-400">
+                    Did you resign from your old club?
+                  </label>
+                </div>
+                <div className="pb-4">
+                  <input
+                    type="radio"
+                    id="yesresigned"
+                    name="clubresigned"
+                    value="yes"
+                    onChange={handleChange}
+                  />
+                  <label className="radio-label" htmlFor="yesresigned">
+                    Yes
+                  </label>
+
+                  <input
+                    type="radio"
+                    id="noresigned"
+                    name="clubresigned"
+                    value="noresigned"
+                    onChange={handleChange}
+                  />
+                  <label className="radio-label" htmlFor="noresigned">
+                    No
+                  </label>
+
+                  <input
+                    type="radio"
+                    id="naresigned"
+                    name="clubresigned"
+                    value="na"
+                    onChange={handleChange}
+                  />
+                  <label className="radio-label" htmlFor="naresigned">
+                    Not Applicable
+                  </label>
+                </div>
+                <GenJoinPdf data={data} />
               </form>
             </div>
           </div>
@@ -342,4 +454,4 @@ const Fees = () => {
   );
 };
 
-export default Fees;
+export default Join;
