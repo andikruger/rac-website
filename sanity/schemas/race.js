@@ -16,6 +16,13 @@ export default {
       type: "slug",
       options: {
         source: "name",
+        // add the current year to the slug
+        slugify: (input) =>
+          input
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .concat(`-${new Date().getFullYear()}`),
+
         maxLength: 96,
       },
       description: "Please click the generate button to create the slug",
@@ -110,6 +117,31 @@ export default {
           { title: "Free State", value: "Free State" },
         ],
         layout: "dropdown",
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: "Association",
+      name: "association",
+      type: "string",
+      options: {
+        list: [
+          { title: "CGA", value: "CGA" },
+          { title: "EPA", value: "EPA" },
+          { title: "KZN", value: "KZN" },
+          { title: "AVT", value: "AVT" },
+          { title: "WPA", value: "WPA" },
+          { title: "AGN", value: "AGN" },
+          { title: "AFS", value: "AFS" },
+          { title: "BOR", value: "BOR" },
+          { title: "MPU", value: "MPU" },
+          { title: "CNW", value: "CNW" },
+          { title: "NWN", value: "NWN" },
+          { title: "SWD", value: "SWD" },
+          { title: "BOL", value: "BOL" },
+        ],
+        layout: "dropdown",
+        default: "CGA",
       },
       validation: (Rule) => Rule.required(),
     },
