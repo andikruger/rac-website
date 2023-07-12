@@ -1,0 +1,476 @@
+[
+  {
+    "date": "2023-05-01",
+    "day": "Wed",
+    "association": "AGN",
+    "name": "MiWay Wally Hayward 42k",
+    "distance": [
+      42,
+      21,
+      10,
+      5
+    ],
+    "starttime": "6:30",
+    "venue": "Centurion Rugby Club",
+    "club": "ACRW",
+    "contactPerson": "Miros Kaffka",
+    "contactNumber": "0665599790"
+  },
+  {
+    "date": "2023-05-01",
+    "day": "Sun",
+    "association": "CGA",
+    "name": "Carleton Half",
+    "distance": [
+      21,
+      10.5
+    ],
+    "starttime": "7:00",
+    "venue": "Carlton Jones High",
+    "club": "Pulse AC",
+    "contactPerson": "Bheki Ngwenya",
+    "contactNumber": "0767949004"
+  },
+  {
+    "date": "2023-05-01",
+    "day": "Mon",
+    "association": "Mpu",
+    "name": "Lowmed River to Spruit City to City",
+    "distance": [
+      42,
+      21
+    ],
+    "starttime": "6:00",
+    "venue": "Whiteriver",
+    "club": "Lowmed",
+    "contactPerson": "Gilda Mavromatis",
+    "contactNumber": "0843571213"
+  },
+  {
+    "date": "2023-05-01",
+    "day": "Mon",
+    "association": "WPA",
+    "name": "Safari race",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "6:00",
+    "venue": "Wellington",
+    "club": "Wellington",
+    "contactPerson": "",
+    "contactNumber": "00000000000"
+  },
+  {
+    "date": "2023-05-01",
+    "day": "Sat",
+    "association": "Bol",
+    "name": "Freedom Race",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "6:00",
+    "venue": "Hugenot High",
+    "club": "Top Events",
+    "contactPerson": "Top events",
+    "contactNumber": "0215117130"
+  },
+  {
+    "date": "2023-05-01",
+    "day": "Mon",
+    "association": "Bor",
+    "name": "Chillie Marathon",
+    "distance": [
+      42
+    ],
+    "starttime": "5:30",
+    "venue": "N2",
+    "club": "Chillie",
+    "contactPerson": "Vuyo Stoto",
+    "contactNumber": "0722900922"
+  },
+  {
+    "date": "2023-05-01",
+    "day": "Mon",
+    "association": "CNW",
+    "name": "Carletonvile 42",
+    "distance": [
+      42,
+      21,
+      10,
+      5
+    ],
+    "starttime": "6:00",
+    "venue": "Carlton Jones High",
+    "club": "Carltonville",
+    "contactPerson": "Rod Knight",
+    "contactNumber": "0829655826"
+  },
+  {
+    "date": "2023-05-06",
+    "day": "Sat",
+    "association": "AFS",
+    "name": "Ngkerk Vaalpark",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "7:00",
+    "venue": "NGKerk Vaalpark",
+    "club": "Ngkerk Vaalpark",
+    "contactPerson": "Dewald",
+    "contactNumber": "0733396809"
+  },
+  {
+    "date": "2023-05-06",
+    "day": "Sat",
+    "association": "AGN",
+    "name": "Jackie Mekler",
+    "distance": [
+      25,
+      10
+    ],
+    "starttime": "7:00",
+    "venue": "Pta Military Sports Complex",
+    "club": "PMMC",
+    "contactPerson": "Vusi Lerefolo",
+    "contactNumber": "0614934543"
+  },
+  {
+    "date": "2023-05-06",
+    "day": "Sat",
+    "association": "Mpu",
+    "name": "Forever Loskop Series 50k",
+    "distance": [
+      50,
+      21,
+      5
+    ],
+    "starttime": "6:00",
+    "venue": "Middelburg to Loskop",
+    "club": "Middelburg",
+    "contactPerson": "Hein Koch",
+    "contactNumber": "0734245984"
+  },
+  {
+    "date": "2023-05-06",
+    "day": "Sat",
+    "association": "EPA",
+    "name": "Heartbreak Hill 1/2",
+    "distance": [
+      21,
+      5
+    ],
+    "starttime": "6:30",
+    "venue": "Itialian Club Charlo",
+    "club": "Charlo A C",
+    "contactPerson": "Eusentha Pillay",
+    "contactNumber": "0846650910"
+  },
+  {
+    "date": "2023-05-06",
+    "day": "Sat",
+    "association": "Bor",
+    "name": "VQS Diesel Depot",
+    "distance": [
+      15
+    ],
+    "starttime": "6:00",
+    "venue": "Hamiltons Sports Club",
+    "club": "Hamilton",
+    "contactPerson": "Bronek Urban",
+    "contactNumber": "0825770932"
+  },
+  {
+    "date": "2023-05-07",
+    "day": "Sun",
+    "association": "WPA",
+    "name": "False Bay 50",
+    "distance": [
+      50
+    ],
+    "starttime": "6:30",
+    "venue": "Gordon's Bay",
+    "club": "Strand AC",
+    "contactPerson": "Barry Muller",
+    "contactNumber": "0827749510"
+  },
+  {
+    "date": "2023-05-07",
+    "day": "Sat",
+    "association": "KZN",
+    "name": "Stella Royal",
+    "distance": [
+      25,
+      10
+    ],
+    "starttime": "6:00",
+    "venue": "Stella Club",
+    "club": "Stella",
+    "contactPerson": "Kevin Hendrikse",
+    "contactNumber": "0834063130"
+  },
+  {
+    "date": "2023-05-13",
+    "day": "Sat",
+    "association": "AGN",
+    "name": "The Love Run",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "6:30",
+    "venue": "Hatfield Christian Church",
+    "club": "Love Run",
+    "contactPerson": "Tumi Motsei",
+    "contactNumber": "0823278691"
+  },
+  {
+    "date": "2023-05-13",
+    "day": "Sat",
+    "association": "Mpu",
+    "name": "Selati 2 in 1",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "7:00",
+    "venue": "Malelane Rugby Club",
+    "club": "Onderberg",
+    "contactPerson": "Marthinus Kelder",
+    "contactNumber": "0845816503"
+  },
+  {
+    "date": "2023-05-13",
+    "day": "Sat",
+    "association": "SWD",
+    "name": "Two Lagiins",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "7:00",
+    "venue": "Cape MSC",
+    "club": "Cape MSC",
+    "contactPerson": "Helena Ferreira",
+    "contactNumber": "0765939636"
+  },
+  {
+    "date": "2023-05-13",
+    "day": "Sat",
+    "association": "EPA",
+    "name": "Sunridge Village 10k",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "7:00",
+    "venue": "Sunridge Village",
+    "club": "Peaac",
+    "contactPerson": "Kevin Benade",
+    "contactNumber": "0794900427"
+  },
+  {
+    "date": "2023-05-13",
+    "day": "Sat",
+    "association": "Bor",
+    "name": "Cumakala Challenge",
+    "distance": [
+      32,
+      10
+    ],
+    "starttime": "6:30",
+    "venue": "No6 Cobongo",
+    "club": "Stutterheim",
+    "contactPerson": "Unathi Stoto",
+    "contactNumber": "0789906349"
+  },
+  {
+    "date": "2023-05-13",
+    "day": "Sat",
+    "association": "Bor",
+    "name": "Madeira Mountain Race",
+    "distance": [
+      24,
+      16
+    ],
+    "starttime": "6:00",
+    "venue": "Frost Street, Komani",
+    "club": "Queenstown",
+    "contactPerson": "Schalk Vorster",
+    "contactNumber": "0764587730"
+  },
+  {
+    "date": "2023-05-14",
+    "day": "Sun",
+    "association": "AVT",
+    "name": "Mothers Day",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "8:00",
+    "venue": "North West Univercity",
+    "club": "Kasi ac",
+    "contactPerson": "Kasi AC",
+    "contactNumber": "0781410346"
+  },
+  {
+    "date": "2023-05-14",
+    "day": "Sun",
+    "association": "AVT",
+    "name": "Vultures",
+    "distance": [
+      10,
+      5
+    ],
+    "starttime": "8:00",
+    "venue": "Saul Tsotesi Stadium",
+    "club": "Vultures",
+    "contactPerson": "Shadrack",
+    "contactNumber": "0729153627"
+  },
+  {
+    "date": "2023-05-14",
+    "day": "Sun",
+    "association": "WPA",
+    "name": "Cape Town 10",
+    "distance": [
+      10
+    ],
+    "starttime": "7:00",
+    "venue": "Woodbridge Island Milnerton",
+    "club": "Brackenfell",
+    "contactPerson": "Jacques Coetzee",
+    "contactNumber": "0826104455"
+  },
+  {
+    "date": "2023-05-14",
+    "day": "Sun",
+    "association": "KZN",
+    "name": "Peace of Africa",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "6:30",
+    "venue": "Kings Park Athletic Stadium",
+    "club": "Mayibuyi",
+    "contactPerson": "Siviwe Benya",
+    "contactNumber": "0835458006"
+  },
+  {
+    "date": "2023-05-14",
+    "day": "Sun",
+    "association": "KZN",
+    "name": "Harry Gwala",
+    "distance": [
+      42,
+      21,
+      10
+    ],
+    "starttime": "7:00",
+    "venue": "Highflats",
+    "club": "Genius",
+    "contactPerson": "Themba Gumede",
+    "contactNumber": "0729488779"
+  },
+  {
+    "date": "2023-05-20",
+    "day": "Sat",
+    "association": "AGN",
+    "name": "Race of Hope",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "7:00",
+    "venue": "The Grove",
+    "club": "RWFL",
+    "contactPerson": "Daan du Toit",
+    "contactNumber": "0825724169"
+  },
+  {
+    "date": "2023-05-20",
+    "day": "Sat",
+    "association": "AVT",
+    "name": "Midas Half",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "8:00",
+    "venue": "Old Vaal Tonians",
+    "club": "HiPerformance",
+    "contactPerson": "Heinrich",
+    "contactNumber": "0820727662"
+  },
+  {
+    "date": "2023-05-20",
+    "day": "Sat",
+    "association": "Mpu",
+    "name": "Croc Valley Road Race",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "6:30",
+    "venue": "Valley Hyper Shopping Centre",
+    "club": "RWFL",
+    "contactPerson": "Christa Van Blerk",
+    "contactNumber": "0836194676"
+  },
+  {
+    "date": "2023-05-20",
+    "day": "Sat",
+    "association": "Mpu",
+    "name": "Highveld Mall Ice Breaker",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "8:00",
+    "venue": "Highveld Mall",
+    "club": "Coaldust",
+    "contactPerson": "Abie Smit",
+    "contactNumber": "0725732501"
+  },
+  {
+    "date": "2023-05-20",
+    "day": "Sat",
+    "association": "WPA",
+    "name": "Easterns 15km",
+    "distance": [
+      15
+    ],
+    "starttime": "7:00",
+    "venue": "Brackenfell Centre",
+    "club": "Easterns",
+    "contactPerson": "Ashley Johnson",
+    "contactNumber": "0835464520"
+  },
+  {
+    "date": "2023-05-20",
+    "day": "Sat",
+    "association": "EPA",
+    "name": "Volkswagen 10km race",
+    "distance": [
+      10,
+      5
+    ],
+    "starttime": "7:00",
+    "venue": "Volkswagen People Pavilion",
+    "club": "Volkswagen",
+    "contactPerson": "Christopher",
+    "contactNumber": "0662344829"
+  }
+]
