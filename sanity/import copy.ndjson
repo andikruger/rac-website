@@ -1,0 +1,420 @@
+[
+  {
+    "date": "2023-06-17",
+    "day": "Sat",
+    "_type": "race",
+    "association": "Mpu",
+    "name": "Wakkerstroom Mountain",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "08:00",
+    "venue": "Wakkerstroom",
+    "club": "Volksrust",
+    "contactPerson": "Rupert Lawlor",
+    "contactNumber": "083 2279020"
+  },
+  {
+    "date": "2023-06-17",
+    "day": "Fri",
+    "_type": "race",
+    "association": "EPA",
+    "name": "Colchester Road Race",
+    "distance": [
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "MacKay Bridge Club",
+    "club": "EPA",
+    "contactPerson": "Michael Mbambani",
+    "contactNumber": "061 0792426"
+  },
+  {
+    "date": "2023-06-17",
+    "day": "Sun",
+    "_type": "race",
+    "association": "KZN",
+    "name": "Nedbank Extra Mural",
+    "distance": [
+      10
+    ],
+    "starttime": "07:30",
+    "venue": "Kings Park Athletics Stadium",
+    "club": "Nedbank",
+    "contactPerson": "Wiseman Sibaya",
+    "contactNumber": "073 0899273"
+  },
+  {
+    "date": "2023-06-17",
+    "day": "Sat",
+    "_type": "race",
+    "association": "· BOL",
+    "name": "Boland Correctional Half.",
+    "distance": [
+      21
+    ],
+    "starttime": "",
+    "venue": "Dal Josaphat Stadium",
+    "club": "Boland Correctional",
+    "contactPerson": "Basil Jantjies",
+    "contactNumber": "074 4431697"
+  },
+  {
+    "date": "2023-06-18",
+    "day": "Sun",
+    "_type": "race",
+    "association": "CGA",
+    "name": "Kagiso 3 in 1",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "08:00",
+    "venue": "Kaglso community centre",
+    "club": "Kagiso",
+    "contactPerson": "Dithapelo Tumane",
+    "contactNumber": "082 7372537"
+  },
+  {
+    "date": "2023-06-18",
+    "day": "Sat",
+    "_type": "race",
+    "association": "SWD",
+    "name": "Palm Tyres",
+    "distance": [
+      10,
+      5
+    ],
+    "starttime": "08:00",
+    "venue": "Courtney Str George",
+    "club": "Rainbow AC",
+    "contactPerson": "Sidwell Oktober",
+    "contactNumber": "073 9584899"
+  },
+  {
+    "date": "2023-06-18",
+    "day": "Sun",
+    "_type": "race",
+    "association": "KZN",
+    "name": "Manguzi 10km",
+    "distance": [
+      10
+    ],
+    "starttime": "08:00",
+    "venue": "Shayina Stadium",
+    "club": "Manguzi",
+    "contactPerson": "Zenith Vumase",
+    "contactNumber": "0725432249"
+  },
+  {
+    "date": "2023-06-18",
+    "day": "Sun",
+    "_type": "race",
+    "association": "KZN",
+    "name": "JL Dube Half",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "07:00",
+    "venue": "Dube Trade Port",
+    "club": "Orcas",
+    "contactPerson": "Pridigal Khumalo",
+    "contactNumber": "060 4966781"
+  },
+  {
+    "date": "2023-06-24",
+    "day": "Sat",
+    "_type": "race",
+    "association": "AGN",
+    "name": "Hazeldean Color Run",
+    "distance": [
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Curro Hazeldean School",
+    "club": "Hazeidean",
+    "contactPerson": "Jan Ramaubane",
+    "contactNumber": "083 7604970"
+  },
+  {
+    "date": "2023-06-24",
+    "day": "Sun",
+    "_type": "race",
+    "association": "CGA",
+    "name": "Race Agains Cancer",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Orlando Community Centre",
+    "club": "Orlando",
+    "contactPerson": "Slongile Maruta",
+    "contactNumber": "0784450249"
+  },
+  {
+    "date": "2023-06-24",
+    "day": "Sat",
+    "_type": "race",
+    "association": "WPA",
+    "name": "Mamre 21km",
+    "distance": [
+      21,
+      5
+    ],
+    "starttime": "07:30",
+    "venue": "Mamre primary",
+    "club": "Mamre AC",
+    "contactPerson": "Lesley Daniels",
+    "contactNumber": "079 7162955"
+  },
+  {
+    "date": "2023-06-24",
+    "day": "Sat",
+    "_type": "race",
+    "association": "EPA",
+    "name": "Bathurst Charity Run",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "06:30",
+    "venue": "Bathurst Showgrounds",
+    "club": "Bathurst",
+    "contactPerson": "Melikhaya Dyubele",
+    "contactNumber": 681436276
+  },
+  {
+    "date": "2023-06-25",
+    "day": "Sun",
+    "_type": "race",
+    "association": "WPA",
+    "name": "Table Mountain 16k",
+    "distance": [
+      16
+    ],
+    "starttime": "07:30",
+    "venue": "La Parada",
+    "club": "K-Way VOB",
+    "contactPerson": "Rene Dick",
+    "contactNumber": "021 7618887"
+  },
+  {
+    "date": "2023-06-25",
+    "day": "Sun",
+    "_type": "race",
+    "association": "KZN",
+    "name": "Durban Spar",
+    "distance": [
+      10,
+      5
+    ],
+    "starttime": "08:00",
+    "venue": "",
+    "club": "Sydenham·",
+    "contactPerson": "Brad Glasspoole",
+    "contactNumber": "083 5010202"
+  },
+  {
+    "date": "2023-07-01",
+    "day": "Sat",
+    "_type": "race",
+    "association": "AGN",
+    "name": "Race of Friendship",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Gienfair Boulevard Lynnwood",
+    "club": "RWFL",
+    "contactPerson": "Daan du Toi!",
+    "contactNumber": "082 5724169"
+  },
+  {
+    "date": "2023-07-01",
+    "day": "Sat",
+    "_type": "race",
+    "association": "WPA",
+    "name": "Eersterivier 15",
+    "distance": [
+      15
+    ],
+    "starttime": "07:00",
+    "venue": "Stratford primary",
+    "club": "Eersteriver",
+    "contactPerson": "Gert Pekeur",
+    "contactNumber": "074 4342332"
+  },
+  {
+    "date": "2023-07-01",
+    "day": "Sat",
+    "_type": "race",
+    "association": "EPA",
+    "name": "Madibaz Half",
+    "distance": [
+      21,
+      10
+    ],
+    "starttime": "07:00",
+    "venue": "Nelson Man·defa Univ",
+    "club": "Madibaz AC",
+    "contactPerson": "Bernard Petersen",
+    "contactNumber": "041 5043243"
+  },
+  {
+    "date": "2023-07-01",
+    "day": "Sat",
+    "_type": "race",
+    "association": "Bor",
+    "name": "Watergat Challenge",
+    "distance": [
+      15
+    ],
+    "starttime": "09:00",
+    "venue": "Macleantown Road",
+    "club": "Oxford",
+    "contactPerson": "Helen Pretorius",
+    "contactNumber": 836096706
+  },
+  {
+    "date": "2023-07-02",
+    "day": "Sun",
+    "_type": "race",
+    "association": "CGA",
+    "name": "Gerald Fox Memorial Race",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Johannesburg Zoo Parkview",
+    "club": "Rocky RR",
+    "contactPerson": "Les Sutcliffe",
+    "contactNumber": "0724722042"
+  },
+  {
+    "date": "2023-07-06",
+    "day": "Sat",
+    "_type": "race",
+    "association": "Mpu",
+    "name": "Hall's",
+    "distance": [
+      21,
+      10,
+      4
+    ],
+    "starttime": "06:30",
+    "venue": "Halls Gateway",
+    "club": "LVCC",
+    "contactPerson": "Beth",
+    "contactNumber": "082 8013600"
+  },
+  {
+    "date": "2023-07-08",
+    "day": "Sat",
+    "_type": "race",
+    "association": "AGN",
+    "name": "Garsfontein Ice Breaker",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Laerskool Grasfontein",
+    "club": "Wingate",
+    "contactPerson": "Mike Minty",
+    "contactNumber": "083 4145938"
+  },
+  {
+    "date": "2023-07-08",
+    "day": "Sat",
+    "_type": "race",
+    "association": "Mpu",
+    "name": "Mozma Cleaning",
+    "distance": [
+      21,
+      10,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Whtte River Rugby club ·",
+    "club": "Legogote",
+    "contactPerson": "Andre Vianello",
+    "contactNumber": "084 5168374"
+  },
+  {
+    "date": "2023-07-08",
+    "day": "Sat",
+    "_type": "race",
+    "association": "SWD",
+    "name": "Knysna Forest Marathon",
+    "distance": [
+      42,
+      21,
+      5
+    ],
+    "starttime": "07:00",
+    "venue": "Giebe - Knysna",
+    "club": "Knysna",
+    "contactPerson": "Marianne Brown",
+    "contactNumber": 761954832
+  },
+  {
+    "date": "2023-07-09",
+    "day": "Sun",
+    "_type": "race",
+    "association": "CGA",
+    "name": "Edenvale Blitz",
+    "distance": [
+      15,
+      5
+    ],
+    "starttime": "06:30",
+    "venue": "Edenvale High",
+    "club": "RRW",
+    "contactPerson": "Sharon Holton",
+    "contactNumber": "0791905295"
+  },
+  {
+    "date": "2023-07-09",
+    "day": "Sun",
+    "_type": "race",
+    "association": "KZN",
+    "name": "Absa Run Yhour City",
+    "distance": [
+      10
+    ],
+    "starttime": "08:00",
+    "venue": "Durban Promenade",
+    "club": "Ethekwini",
+    "contactPerson": "Ndokenhle Zulu",
+    "contactNumber": "072 6334799"
+  },
+  {
+    "date": "2023-07-15",
+    "day": "Fri",
+    "_type": "race",
+    "association": "Mpu",
+    "name": "SPAR Women's Challenge",
+    "distance": [
+      10
+    ],
+    "starttime": "08:00",
+    "venue": "Mbombela Stadium",
+    "club": "Lowmed",
+    "contactPerson": "Gilda Mavromatis",
+    "contactNumber": "084 3571213"
+  }
+]

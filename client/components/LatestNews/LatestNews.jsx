@@ -10,6 +10,24 @@ const LatestNews = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="bg-white rounded-lg shadow-lg p-4">
           <Image
+            src="https://cdn.sanity.io/images/yavqngwf/production/521de90605aa21c149e586095f105467b0f0774d-750x563.jpg?w=3000"
+            alt="Comrades Marathon 2023"
+            width={500}
+            height={500}
+          />
+          <h1 className="font-bold text-xl p-4">Comrades Marathon 2023</h1>
+          <p className="text-gray-500 p-4">
+            Congratulations to all of our Comrades runners.
+          </p>
+          <Link legacyBehavior href="article/comrades-marathon-2023">
+            <a className="bg-[#67162c] hover text-white font-bold py-2 px-4 rounded">
+              Read more
+            </a>
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-4">
+          <Image
             src="https://cdn.sanity.io/images/yavqngwf/production/07b629e0a15b61c854e51ed456bb5e5d988277c3-5568x3712.jpg?w=3000"
             alt="Happy New Year"
             width={500}
@@ -25,24 +43,6 @@ const LatestNews = () => {
             </a>
           </Link>
         </div>
-        <div className="bg-white rounded-lg shadow-lg p-4">
-          <Image
-            src="https://cdn.sanity.io/images/yavqngwf/production/5386fa13e43d894a3ac6910816d17699c6cb8bef-1769x1181.png?w=3000"
-            alt="Year end message"
-            width={500}
-            height={500}
-          />
-          <h1 className="font-bold text-xl p-4">Year end message</h1>
-          <p className="text-gray-500 p-4">
-            A year like no other, but we are still here.
-          </p>
-          <Link legacyBehavior href="article/year-end-message-2022">
-            <a className="bg-[#67162c] hover text-white font-bold py-2 px-4 rounded">
-              Read more
-            </a>
-          </Link>
-        </div>
-
         <div className="bg-white rounded-lg shadow-lg p-4">
           <Image
             src="https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1849&q=80"

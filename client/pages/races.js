@@ -22,6 +22,7 @@ const Races = () => {
 
       let endTime = new Date(item.startTime);
       endTime.setHours(endTime.getHours() + 3);
+      console.log(item.name);
 
       return {
         // id auto increments
